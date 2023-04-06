@@ -1,4 +1,5 @@
 class Model{
-  id:number = 0
+  id:number = 123;
   nombre:string = "";
+  loquetudecias: string = "";
 }
