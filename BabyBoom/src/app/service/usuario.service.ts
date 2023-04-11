@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
-import { LoginInfo } from '../model/LoginInfo';
+import { Usuario } from '../model/usuario';
 import { HttpClient } from '@angular/common/http';
 
 const base_url = environment.base;
@@ -8,10 +8,10 @@ const base_url = environment.base;
 @Injectable({
   providedIn: 'root',
 })
-export class LoginInfoService {
-  private url = `${base_url}/LoginInfo`;
+export class UsuarioService {
+  private url = `${base_url}/Usuario`;
   constructor(private http: HttpClient) {}
   list() {
-    return this.http.get<LoginInfo[]>(this.url);
+    return this.http.get<Usuario[]>(this.url);
   }
 }

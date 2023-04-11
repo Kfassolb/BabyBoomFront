@@ -1,6 +1,6 @@
 module.exports = function () {
   var data = {
-    LoginInfo: [
+    Usuario: [
       {
         IDusuario: 1,
         Username: "Parka",

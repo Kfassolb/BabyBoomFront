@@ -4,16 +4,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { LoginInfoComponent } from './components/login-info/login-info.component';
-import { LoginInfoListarComponent } from './components/login-info/login-info-listar/login-info-listar.component';
 import { HttpClientModule } from '@angular/common/http';
-import {MatTableModule} from '@angular/material/table'
+import {MatTableModule} from '@angular/material/table';
+import { UsuarioComponent } from './components/usuario/usuario.component';
+import { UsuarioListarComponent } from './components/usuario/usuario-listar/usuario-listar.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginInfoComponent,
-    LoginInfoListarComponent
+    UsuarioListarComponent,
+    UsuarioComponent,
   ],
   imports: [
     BrowserModule,
