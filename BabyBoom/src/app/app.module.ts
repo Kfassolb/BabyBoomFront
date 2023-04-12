@@ -20,7 +20,6 @@ import { UsuarioListarComponent } from './components/usuario/usuario-listar/usua
     TipocomprobanteListarComponent,
     UsuarioListarComponent,
     UsuarioComponent,
-
   ],
   imports: [
     BrowserModule,
