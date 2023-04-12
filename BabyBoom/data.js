@@ -40,6 +40,30 @@ module.exports = function(){
         Password: "GmB!nxcbKV6s9X",
       },
     ],
+    Productos: [
+      {
+        IDproducto: 1,
+        Nombre: "Maria",
+        Tipo: "ABC",
+        Cantidad: 2,
+        PrecioUnitario: 3,
+      },
+      {
+        IDproducto: 2,
+        Nombre: "Juan",
+        Tipo: "DEF",
+        Cantidad: 4,
+        PrecioUnitario: 5,
+      },
+      {
+        IDproducto: 3,
+        Nombre: "Ana",
+        Tipo: "GHI",
+        Cantidad: 2,
+        PrecioUnitario: 7,
+      }
+
+    ]
   }
   return data
 }
