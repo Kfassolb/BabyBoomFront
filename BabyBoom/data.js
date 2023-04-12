@@ -8,7 +8,8 @@ module.exports = function(){
       {
         IDTipoComprobante: 2,
         nombreComprobante: "Factura",
-      }
+      },
     ]
   }
+  return data
 }

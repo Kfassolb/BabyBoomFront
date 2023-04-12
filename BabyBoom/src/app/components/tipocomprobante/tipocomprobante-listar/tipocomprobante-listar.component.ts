@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MatTableDataSource } from '@angular/material/table';
 import { Tipocomprobante } from 'src/app/model/TipoComprobante';
+import { TipocomprobanteService } from 'src/app/service/tipocomprobante.service';
 
 @Component({
   selector: 'app-tipocomprobante-listar',
@@ -9,4 +11,13 @@ import { Tipocomprobante } from 'src/app/model/TipoComprobante';
 export class TipocomprobanteListarComponent implements OnInit{
   lista:Tipocomprobante[] = [];
   dataSource:MatTableDataSource<Tipocomprobante> = new MatTableDataSource();
+  displayedColumns:string[] = ['id', 'tipoComprobante']
+  constructor(private tcS:TipocomprobanteService){
+
+  }
+  ngOnInit(): void {
+      this.tcS.list().subscribe(data=>{
+        this.dataSource = new MatTableDataSource(data);
+      })
+  }
 }
