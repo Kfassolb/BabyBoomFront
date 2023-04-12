@@ -5,10 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { TipocomprobanteComponent } from './components/tipocomprobante/tipocomprobante.component';
-import { HttpClientModule } from '@angular/common/http';
-import {MatTableModule} from '@angular/material/table';
 import { TipocomprobanteListarComponent } from './components/tipocomprobante/tipocomprobante-listar/tipocomprobante-listar.component';
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import {MatTableModule} from '@angular/material/table';
@@ -20,7 +17,7 @@ import { UsuarioListarComponent } from './components/usuario/usuario-listar/usua
   declarations: [
     AppComponent,
     TipocomprobanteComponent,
-    TipocomprobanteListarComponen
+    TipocomprobanteListarComponent,
     UsuarioListarComponent,
     UsuarioComponent,
 
