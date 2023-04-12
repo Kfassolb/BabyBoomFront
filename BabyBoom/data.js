@@ -1,5 +1,15 @@
-module.exports = function () {
+module.exports = function(){
   var data = {
+    TiposComprobantes: [
+      {
+        IDTipoComprobante: 1,
+        nombreComprobante: "Boleta",
+      },
+      {
+        IDTipoComprobante: 2,
+        nombreComprobante: "Factura",
+      },
+    ],
     Usuario: [
       {
         IDusuario: 1,
@@ -22,6 +32,7 @@ module.exports = function () {
         Password: "GmB!nxcbKV6s9X",
       },
     ],
-  };
-  return data;
-};
+  }
+  return data
+}
+
