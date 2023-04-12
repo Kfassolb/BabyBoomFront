@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 
 import { TipocomprobanteComponent } from './components/tipocomprobante/tipocomprobante.component';
 import { TipocomprobanteListarComponent } from './components/tipocomprobante/tipocomprobante-listar/tipocomprobante-listar.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animacd tions';
 import { HttpClientModule } from '@angular/common/http';
 import {MatTableModule} from '@angular/material/table';
 import { UsuarioComponent } from './components/usuario/usuario.component';
