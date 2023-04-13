@@ -40,6 +40,20 @@ module.exports = function(){
         Password: "GmB!nxcbKV6s9X",
       },
     ],
+    Servicio: [
+      {
+        IDservicio:1,
+        NombreServic:"Baño bebe",
+      },
+      {
+        IDservicio:2,
+        NombreServic:"Dar comer bebe",
+      },
+      {
+        IDservicio:3,
+        NombreServic:"Siesta bebe",
+      },
+   ],
   }
   return data
 }
