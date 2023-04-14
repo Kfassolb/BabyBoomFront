@@ -43,15 +43,15 @@ module.exports = function(){
     Servicio: [
       {
         IDservicio:1,
-        NombreServic:"Baño bebe",
+        NombreServicio:"Baño bebe",
       },
       {
         IDservicio:2,
-        NombreServic:"Dar comer bebe",
+        NombreServicio:"Dar comer bebe",
       },
       {
         IDservicio:3,
-        NombreServic:"Siesta bebe",
+        NombreServicio:"Siesta bebe",
       },
    ],
   }

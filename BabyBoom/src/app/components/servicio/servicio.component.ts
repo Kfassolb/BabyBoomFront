@@ -1,10 +1,13 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-servicio',
   templateUrl: './servicio.component.html',
   styleUrls: ['./servicio.component.css']
 })
-export class ServicioComponent {
+export class ServicioComponent implements OnInit{
+  constructor(public route:ActivatedRoute){}
+  ngOnInit(): void {
 
+  }
 }

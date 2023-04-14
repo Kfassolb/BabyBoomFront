@@ -1,5 +1,4 @@
-  class Servicio
-  {
+ export class Servicio{
     IDservicio:number=0
-    NombreServic:string=''
-  }
+    NombreServicio:string=""
+}
