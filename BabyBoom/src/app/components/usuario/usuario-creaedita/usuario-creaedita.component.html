@@ -7,23 +7,26 @@
     <title>Document</title>
   </head>
   <body>
-    <div>
+    <div class="container text-center">
+      <div class="p-3">
+        <h1>Registro de Usuario</h1>
+      </div>
       <form [formGroup]="form" (submit)="aceptar()">
         <mat-form-field class="example-full-width">
           <mat-label>Id</mat-label>
           <input matInput placeholder="Id" formControlName="id" />
         </mat-form-field>
-
+        <br>
         <mat-form-field class="example-full-width">
           <mat-label>Nombre de Usuario</mat-label>
           <input matInput placeholder="username" formControlName="Username" />
         </mat-form-field>
-
+        <br>
         <mat-form-field class="example-full-width">
           <mat-label>Contraseña</mat-label>
           <input matInput placeholder="password" formControlName="Password" />
         </mat-form-field>
-
+        <br>
         <!-- <mat-form-field appearance="fill">
           <mat-label>Género</mat-label>
           <mat-select placeholder="Placeholder" formControlName="genderPet">
@@ -43,7 +46,7 @@
           <mat-datepicker-toggle [for]="picker"></mat-datepicker-toggle>
           <mat-datepicker #picker></mat-datepicker>
         </mat-form-field> -->
-        <button mat-raised-button color="primary">Aceptar</button>
+        <button mat-raised-button color="primary" class="m-3">Aceptar</button>
         <button mat-raised-button routerLink="/Usuario" color="warn">Cancelar</button>
       </form>
     </div>
