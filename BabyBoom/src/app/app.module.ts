@@ -10,8 +10,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import {MatTableModule} from '@angular/material/table';
 import { UsuarioComponent } from './components/usuario/usuario.component';
-import { UsuarioListarComponent } from './components/usuario/usuario-listar/usuario-listar.component'
-
+import { UsuarioListarComponent } from './components/usuario/usuario-listar/usuario-listar.component';
+import { ServicioComponent } from './components/servicio/servicio.component';
+import { ServicioListarComponent } from './components/servicio/servicio-listar/servicio-listar.component'
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { UsuarioListarComponent } from './components/usuario/usuario-listar/usua
     TipocomprobanteListarComponent,
     UsuarioListarComponent,
     UsuarioComponent,
-
+    ServicioComponent,
+    ServicioListarComponent,
   ],
   imports: [
     BrowserModule,
