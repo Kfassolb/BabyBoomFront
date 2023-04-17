@@ -18,9 +18,9 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatButtonModule } from '@angular/material/button';
 import { UsuarioCreaeditaComponent } from './components/usuario/usuario-creaedita/usuario-creaedita.component';
-import { UsuarioListarComponent } from './components/usuario/usuario-listar/usuario-listar.component';
 import { ServicioComponent } from './components/servicio/servicio.component';
 import { ServicioListarComponent } from './components/servicio/servicio-listar/servicio-listar.component'
+import { MatIconModule } from '@angular/material/icon'
 
 @NgModule({
   declarations: [
@@ -45,8 +45,9 @@ import { ServicioListarComponent } from './components/servicio/servicio-listar/s
     MatInputModule,
     MatSelectModule,
     MatDatepickerModule,
-    MatButtonModule
-    BrowserAnimationsModule
+    MatButtonModule,
+    BrowserAnimationsModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
