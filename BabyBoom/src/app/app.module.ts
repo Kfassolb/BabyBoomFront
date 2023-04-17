@@ -20,7 +20,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { UsuarioCreaeditaComponent } from './components/usuario/usuario-creaedita/usuario-creaedita.component';
 import { ServicioComponent } from './components/servicio/servicio.component';
 import { ServicioListarComponent } from './components/servicio/servicio-listar/servicio-listar.component'
-import { MatIconModule } from '@angular/material/icon'
+import { MatIconModule } from '@angular/material/icon';
+import { TipoenfermedadComponent } from './components/tipoenfermedad/tipoenfermedad.component';
+import { TipoenfermedadListarComponent } from './components/tipoenfermedad/tipoenfermedad-listar/tipoenfermedad-listar.component';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle'
 
 @NgModule({
   declarations: [
@@ -32,6 +35,8 @@ import { MatIconModule } from '@angular/material/icon'
     UsuarioCreaeditaComponent,
     ServicioComponent,
     ServicioListarComponent,
+    TipoenfermedadComponent,
+    TipoenfermedadListarComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,6 +53,7 @@ import { MatIconModule } from '@angular/material/icon'
     MatButtonModule,
     BrowserAnimationsModule,
     MatIconModule,
+    MatSlideToggleModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

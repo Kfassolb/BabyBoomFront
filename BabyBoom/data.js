@@ -53,7 +53,29 @@ module.exports = function(){
         IDservicio:3,
         NombreServicio:"Siesta bebe",
       },
-   ],
+    ],
+    TiposEnfermedades: [
+      {
+        IDTipoEnfermedad: 1,
+        nombreEnfermedad: "Infecciones respiratorias",
+        TipoEnfermedad:"Asma"
+      },
+      {
+        IDTipoEnfermedad: 2,
+        nombreEnfermedad: "Infecciones gastrointestinales",
+        TipoEnfermedad:"Gastritis"
+      },
+      {
+        IDTipoEnfermedad: 3,
+        nombreEnfermedad: "Infecciones de la piel",
+        TipoEnfermedad:"Bitiligo"
+      },
+      {
+        IDTipoEnfermedad: 4,
+        nombreEnfermedad: "Problemas de oído",
+        TipoEnfermedad:"Sordera parcial"
+      },
+    ],
   }
   return data
 }
