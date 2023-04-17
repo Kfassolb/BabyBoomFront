@@ -1,5 +1,23 @@
-module.exports = function () {
+module.exports = function(){
   var data = {
+    TiposComprobantes: [
+      {
+        IDTipoComprobante: 1,
+        nombreComprobante: "Boleta de venta electronica",
+      },
+      {
+        IDTipoComprobante: 2,
+        nombreComprobante: "Factura electrónica",
+      },
+      {
+        IDTipoComprobante: 3,
+        nombreComprobante: "Nota de crédito electrónica",
+      },
+      {
+        IDTipoComprobante: 4,
+        nombreComprobante: "Nota de débito electrónica",
+      },
+    ],
     Usuario: [
       {
         id: 1,
@@ -22,6 +40,21 @@ module.exports = function () {
         Password: "GmB!nxcbKV6s9X",
       },
     ],
-  };
-  return data;
-};
+    Servicio: [
+      {
+        IDservicio:1,
+        NombreServicio:"Baño bebe",
+      },
+      {
+        IDservicio:2,
+        NombreServicio:"Dar comer bebe",
+      },
+      {
+        IDservicio:3,
+        NombreServicio:"Siesta bebe",
+      },
+   ],
+  }
+  return data
+}
+
