@@ -10,7 +10,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import {MatTableModule} from '@angular/material/table';
 import { UsuarioComponent } from './components/usuario/usuario.component';
-import { UsuarioListarComponent } from './components/usuario/usuario-listar/usuario-listar.component'
+import { UsuarioListarComponent } from './components/usuario/usuario-listar/usuario-listar.component';
+import { TiposuscripcionComponent } from './components/tiposuscripcion/tiposuscripcion.component';
+import { TiposuscripcionListarComponent } from './components/tiposuscripcion/tiposuscripcion-listar/tiposuscripcion-listar.component'
 
 
 @NgModule({
@@ -20,6 +22,8 @@ import { UsuarioListarComponent } from './components/usuario/usuario-listar/usua
     TipocomprobanteListarComponent,
     UsuarioListarComponent,
     UsuarioComponent,
+    TiposuscripcionComponent,
+    TiposuscripcionListarComponent,
   ],
   imports: [
     BrowserModule,

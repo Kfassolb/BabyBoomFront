@@ -40,6 +40,20 @@ module.exports = function(){
         Password: "GmB!nxcbKV6s9X",
       },
     ],
+    TiposSuscripcion: [
+      {
+        id: 1,
+        nombreSuscripcion: "Boleta de venta electronica",
+      },
+      {
+        id: 2,
+        nombreSuscripcion: "Boleta de venta electronica",
+      },
+      {
+        id: 3,
+        nombreSuscripcion: "Boleta de venta electronica",
+      },
+    ],
   }
   return data
 }
