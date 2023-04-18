@@ -2,19 +2,19 @@ module.exports = function(){
   var data = {
     TiposComprobantes: [
       {
-        IDTipoComprobante: 1,
+        id: 1,
         nombreComprobante: "Boleta de venta electronica",
       },
       {
-        IDTipoComprobante: 2,
+        id: 2,
         nombreComprobante: "Factura electrónica",
       },
       {
-        IDTipoComprobante: 3,
+        id: 3,
         nombreComprobante: "Nota de crédito electrónica",
       },
       {
-        IDTipoComprobante: 4,
+        id: 4,
         nombreComprobante: "Nota de débito electrónica",
       },
     ],
