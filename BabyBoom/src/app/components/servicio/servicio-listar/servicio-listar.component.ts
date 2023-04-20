@@ -11,11 +11,11 @@ export class ServicioListarComponent implements OnInit{
 lista:Servicio[]=[];
 dataSource:MatTableDataSource<Servicio> = new MatTableDataSource();
   displayedColumns:string[] = ['id', 'nombreservicio']
-  constructor(private tcS:ServicioService){
+  constructor(private Ss:ServicioService){
 
   }
   ngOnInit(): void {
-      this.tcS.list().subscribe(data=>{
+      this.Ss.list().subscribe(data=>{
         this.dataSource = new MatTableDataSource(data);
       })
   }

@@ -11,7 +11,6 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatTableModule} from '@angular/material/table';
 import { UsuarioComponent } from './components/usuario/usuario.component';
 import { UsuarioListarComponent } from './components/usuario/usuario-listar/usuario-listar.component';
-import { ServicioComponent } from './components/servicio/servicio.component';
 import { ServicioListarComponent } from './components/servicio/servicio-listar/servicio-listar.component';
 import { TipocomprobanteCreaeditaComponent } from './components/tipocomprobante/tipocomprobante-creaedita/tipocomprobante-creaedita.component'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -20,6 +19,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatButtonModule} from '@angular/material/button';
+import * as moment from 'moment';
+import { ServicioCreaditaComponent } from './components/servicio/servicio-creadita/servicio-creadita.component';
+import { ServicioCompoment } from './components/servicio/servicio.component';
 
 @NgModule({
   declarations: [
@@ -28,9 +30,10 @@ import {MatButtonModule} from '@angular/material/button';
     TipocomprobanteListarComponent,
     UsuarioListarComponent,
     UsuarioComponent,
-    ServicioComponent,
     ServicioListarComponent,
     TipocomprobanteCreaeditaComponent,
+    ServicioCreaditaComponent,
+    ServicioCompoment,
   ],
   imports: [
     BrowserModule,
@@ -45,6 +48,7 @@ import {MatButtonModule} from '@angular/material/button';
     MatSelectModule,
     MatDatepickerModule,
     MatButtonModule
+
 
   ],
   providers: [],
