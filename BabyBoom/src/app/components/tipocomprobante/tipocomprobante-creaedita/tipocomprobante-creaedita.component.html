@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <div>
+    <form [formGroup]="form" (submit)="aceptar()">
+      <mat-form-field class="example-full-width">
+        <mat-label>Id</mat-label>
+        <input matInput placeholder="Id" formControlName="id">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Nombre Comprobante</mat-label>
+        <input matInput placeholder="Nombre" formControlName="nombreComprobante">
+      </mat-form-field>
+<!--
+      <mat-form-field  appearance="fill">
+        <mat-label>Género</mat-label>
+        <mat-select placeholder="PlaceHolder" formControlName="genderPet">
+         <mat-option value="Hembra">Hembra</mat-option>
+         <mat-option value="Macho">Macho</mat-option>
+        </mat-select>
+       </mat-form-field>
+-->
+<!--
+       <mat-form-field appearance="fill">
+         <mat-label>Fecha de nacimiento</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="birthDatePet" placeholder="Choose a date">
+          <mat-datepicker-toggle matSuffix[for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker-toggle [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+       </mat-form-field>
+-->
+
+
+       <button mat-raised-button color="primary" class="p-2">aceptar</button>
+       <button mat-raised-button color="warn" routerlink="/tipocomprobantes" color="warn">Cancelar</button>
+    </form>
+  </div>
+</body>
+</html>
