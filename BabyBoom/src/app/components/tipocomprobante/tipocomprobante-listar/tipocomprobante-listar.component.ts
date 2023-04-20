@@ -11,13 +11,16 @@ import { TipocomprobanteService } from 'src/app/service/tipocomprobante.service'
 export class TipocomprobanteListarComponent implements OnInit{
   lista:Tipocomprobante[] = [];
   dataSource:MatTableDataSource<Tipocomprobante> = new MatTableDataSource();
-  displayedColumns:string[] = ['id', 'tipoComprobante']
+  displayedColumns:string[] = ['id', 'tipoComprobante','accion1']
   constructor(private tcS:TipocomprobanteService){
 
   }
   ngOnInit(): void {
       this.tcS.list().subscribe(data=>{
         this.dataSource = new MatTableDataSource(data);
-      })
+      });
+      this.tcS.getList().subscribe(data=>{
+        this.dataSource= new MatTableDataSource(data);
+      });
   }
 }

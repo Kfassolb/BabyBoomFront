@@ -6,7 +6,8 @@ import { TipocomprobanteCreaeditaComponent } from './components/tipocomprobante/
 const routes: Routes = [
   {
     path:'tipocomprobantes', component:TipocomprobanteComponent, children:[
-      {path: 'tipocomprobanteeditar',component:TipocomprobanteCreaeditaComponent}
+      {path:'tipocomprobanteeditar',component:TipocomprobanteCreaeditaComponent},
+      {path:'edicion/:id',component:TipocomprobanteCreaeditaComponent},
     ]
   }
 ];

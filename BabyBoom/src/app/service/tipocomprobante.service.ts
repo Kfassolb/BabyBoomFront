@@ -8,7 +8,7 @@ const base_url = environment.base
   providedIn: 'root'
 })
 export class TipocomprobanteService {
-  private url = `${base_url}/tiposcomprobantes`
+  private url = `${base_url}/tipocomprobantes`
   private listCambio = new Subject<Tipocomprobante[]>();
   constructor(private http:HttpClient) { }
   list(){
@@ -22,6 +22,13 @@ export class TipocomprobanteService {
     this.listCambio.next(listanueva);
   }
   getList(){
-    this.listCambio.asObservable();
+    return this.listCambio.asObservable();
   }
+  listId(id:number){
+    return this.http.get<Tipocomprobante>(`${this.url}/${id}`);
+  }
+  update(tipocomprobante:Tipocomprobante){
+    return this.http.put(this.url+"/"+tipocomprobante.id,tipocomprobante);
+  }
+
 }
