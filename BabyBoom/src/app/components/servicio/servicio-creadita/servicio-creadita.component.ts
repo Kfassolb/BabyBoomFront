@@ -14,28 +14,27 @@ form:FormGroup=new FormGroup({});
 servicio:Servicio= new Servicio();
 mensaje: string = "";
 maxFecha:Date=moment().add(-1,'days').toDate();
-
 constructor(private sS:ServicioService, private router:Router){}
-
 ngOnInit(): void {
   this.form = new FormGroup({
     id:new FormControl(),
     NombreServicio:new FormControl(),
   })
 }
-aceptar(): void{
-this.servicio.IDservicio=this.form.value['IDservicio'];
-this.servicio.NombreServicio=this.form.value['NombreServicio']
-if(this.form.value['NombreServicio'].length>0){
-  this.sS.insert(this.servicio).subscribe(data=>{
-    this.sS.list().subscribe(data=>{
-      this.sS.setlist(data);
+aceptar(): void {
+  this.servicio.IDservicio = this.form.value['id'];
+  this.servicio.NombreServicio = this.form.value['NombreServicio'];
+
+  if (this.form.value['NombreServicio'].length > 0) {
+    this.sS.insert(this.servicio).subscribe(data => {
+      this.sS.list().subscribe(data => {
+        this.sS.setList(data);
+      })
     })
-  })
-  this.router.navigate(['Servicios'])
-}else{
-  this.mensaje="Ingrese el nombre!!"
-}
+    this.router.navigate(['servicio']);
+  } else {
+    this.mensaje = "Ingrese el nombre!!!";
+  }
 }
 
 }
