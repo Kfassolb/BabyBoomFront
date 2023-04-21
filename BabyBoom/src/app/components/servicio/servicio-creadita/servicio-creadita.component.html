@@ -1,47 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registra Servicio</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
+
 <body>
+    <div class="container">
+        <div style="text-align: center;">
+            <h1>Registro de Servicios</h1>
+        </div>
 
-  <div>
-    <form [formGroup]="form" (submit)="aceptar()">
-      <mat-form-field class="example-full-width">
-        <mat-label>Id</mat-label>
-        <input matInput placeholder="Id" formControlName="IDservicio">
-      </mat-form-field>
+        <form [formGroup]="form" (submit)="aceptar()">
 
-      <mat-form-field class="example-full-width">
-        <mat-label>Servicio</mat-label>
-        <input matInput placeholder="Nombre" formControlName="NombreServicio">
-      </mat-form-field>
-<!--
-      <mat-form-field  appearance="fill">
-        <mat-label>Género</mat-label>
-        <mat-select placeholder="PlaceHolder" formControlName="genderPet">
-         <mat-option value="Hembra">Hembra</mat-option>
-         <mat-option value="Macho">Macho</mat-option>
-        </mat-select>
-       </mat-form-field>
--->
-<!--
-       <mat-form-field appearance="fill">
-         <mat-label>Fecha de nacimiento</mat-label>
-        <input matInput [matDatepicker]="picker" formControlName="birthDatePet" placeholder="Choose a date">
-          <mat-datepicker-toggle matSuffix[for]="picker"></mat-datepicker-toggle>
-        <mat-datepicker-toggle [for]="picker"></mat-datepicker-toggle>
-        <mat-datepicker #picker></mat-datepicker>
-       </mat-form-field>
--->
-       <div style="text-align: center;"></div>
-       <button mat-raised-button color="primary">aceptar</button>
-       <button mat-raised-button color="warn" routerLink="/Servicio">Cancelar</button>
-    </form>
-  </div>
+            <mat-form-field class="example-full-width">
+                <mat-label>Id</mat-label>
+                <input matInput placeholder="IDservicio" formControlName="IDservicio">
+            </mat-form-field>
+            <br>
+            <mat-form-field class="example-full-width">
+                <mat-label>NombreServicio</mat-label>
+                <input matInput placeholder="NombreServicio" formControlName="NombreServicio">
+            </mat-form-field>
+            <br>
+            <div style="text-align: center;">
+                <button mat-raised-button color="primary">Aceptar</button>
+                <button mat-raised-button color="warn" routerLink="/Servicios">Cancelar</button>
+            </div>
+
+            <button mat-button>Click me!</button>
+        </form>
+    </div>
 </body>
+
 </html>
 

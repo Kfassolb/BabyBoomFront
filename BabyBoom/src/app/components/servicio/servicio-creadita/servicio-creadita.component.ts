@@ -24,7 +24,7 @@ ngOnInit(): void {
   })
 }
 aceptar(): void{
-this.servicio.IDservicio=this.form.value['id'];
+this.servicio.IDservicio=this.form.value['IDservicio'];
 this.servicio.NombreServicio=this.form.value['NombreServicio']
 if(this.form.value['NombreServicio'].length>0){
   this.sS.insert(this.servicio).subscribe(data=>{
@@ -32,7 +32,7 @@ if(this.form.value['NombreServicio'].length>0){
       this.sS.setlist(data);
     })
   })
-  this.router.navigate(['Servicio'])
+  this.router.navigate(['Servicios'])
 }else{
   this.mensaje="Ingrese el nombre!!"
 }

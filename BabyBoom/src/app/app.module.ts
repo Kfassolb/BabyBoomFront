@@ -19,7 +19,6 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatButtonModule} from '@angular/material/button';
-import * as moment from 'moment';
 import { ServicioCreaditaComponent } from './components/servicio/servicio-creadita/servicio-creadita.component';
 import { ServicioCompoment } from './components/servicio/servicio.component';
 
@@ -47,8 +46,7 @@ import { ServicioCompoment } from './components/servicio/servicio.component';
     MatInputModule,
     MatSelectModule,
     MatDatepickerModule,
-    MatButtonModule
-
+    MatButtonModule,
 
   ],
   providers: [],

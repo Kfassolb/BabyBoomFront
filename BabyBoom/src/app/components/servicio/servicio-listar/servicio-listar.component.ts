@@ -10,7 +10,7 @@ import {  Servicio } from 'src/app/model/Servicio'
 export class ServicioListarComponent implements OnInit{
 lista:Servicio[]=[];
 dataSource:MatTableDataSource<Servicio> = new MatTableDataSource();
-  displayedColumns:string[] = ['id', 'nombreservicio']
+displayedColumns:string[] = ['id', 'nombreservicio']
   constructor(private Ss:ServicioService){
 
   }
