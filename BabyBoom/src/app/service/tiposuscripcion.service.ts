@@ -13,3 +13,4 @@ export class TiposuscripcionService{
     return this.http.get<Tiposuscripcion[]>(this.url);
   }
 }
+

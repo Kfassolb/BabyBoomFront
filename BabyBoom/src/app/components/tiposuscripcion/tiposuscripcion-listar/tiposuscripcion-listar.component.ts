@@ -22,3 +22,4 @@ export class TiposuscripcionListarComponent implements OnInit {
       })
   }
 }
+

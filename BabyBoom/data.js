@@ -43,15 +43,15 @@ module.exports = function(){
     TiposSuscripcion: [
       {
         id: 1,
-        nombreSuscripcion: "Boleta de venta electronica",
+        nombreSuscripcion: "Gratuito",
       },
       {
         id: 2,
-        nombreSuscripcion: "Boleta de venta electronica",
+        nombreSuscripcion: "Premium mensual",
       },
       {
         id: 3,
-        nombreSuscripcion: "Boleta de venta electronica",
+        nombreSuscripcion: "Premium anual",
       },
     ],
   }
