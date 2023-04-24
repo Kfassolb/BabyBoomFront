@@ -23,8 +23,8 @@ import { ServicioListarComponent } from './components/servicio/servicio-listar/s
 import { MatIconModule } from '@angular/material/icon';
 import { TipoenfermedadComponent } from './components/tipoenfermedad/tipoenfermedad.component';
 import { TipoenfermedadListarComponent } from './components/tipoenfermedad/tipoenfermedad-listar/tipoenfermedad-listar.component';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { TipoenfermedadCreaeditarComponent } from './servicio/tipoenfermedad/tipoenfermedad-creaeditar/tipoenfermedad-creaeditar.component'
+import { MatSlideToggleModule } from '@angular/material/slide-toggle'
+
 
 @NgModule({
   declarations: [
@@ -38,7 +38,7 @@ import { TipoenfermedadCreaeditarComponent } from './servicio/tipoenfermedad/tip
     ServicioListarComponent,
     TipoenfermedadComponent,
     TipoenfermedadListarComponent,
-    TipoenfermedadCreaeditarComponent,
+
   ],
   imports: [
     BrowserModule,
