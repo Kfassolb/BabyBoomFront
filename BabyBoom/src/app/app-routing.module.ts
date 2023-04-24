@@ -8,7 +8,7 @@ import { ServicioComponent } from './components/servicio/servicio.component';
 import { ServicioListarComponent } from './components/servicio/servicio-listar/servicio-listar.component';
 import { TipoenfermedadComponent } from './components/tipoenfermedad/tipoenfermedad.component';
 import { TipoenfermedadListarComponent } from './components/tipoenfermedad/tipoenfermedad-listar/tipoenfermedad-listar.component';
-
+import { TipoenfermedadCreareditarComponent } from './components/tipoenfermedad/tipoenfermedad-creareditar/tipoenfermedad-creareditar.component';
 const routes: Routes = [
   {
     path: 'Usuario', component:UsuarioComponent, children: [
@@ -27,7 +27,8 @@ const routes: Routes = [
   },
   {
     path: 'Enfermedad', component:TipoenfermedadComponent, children: [
-      {path:'agregar', component:TipoenfermedadListarComponent}
+      {path:'agregar', component:TipoenfermedadCreareditarComponent},
+      {path: 'edicion/:id',component:TipoenfermedadCreareditarComponent},
     ],
   }
 ];

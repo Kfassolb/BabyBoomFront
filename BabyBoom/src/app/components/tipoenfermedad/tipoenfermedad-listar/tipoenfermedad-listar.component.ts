@@ -11,7 +11,7 @@ import { TipoEnfermedadeService } from 'src/app/service/tipoenfermedad.service'
 export class TipoenfermedadListarComponent implements OnInit{
   lista:Tipoenfermedad[] = [];
   dataSource:MatTableDataSource<Tipoenfermedad> = new MatTableDataSource();
-  displayedColumns:string[] = ['id', 'nombreEnfermedad','TipoEnfermedad']
+  displayedColumns:string[] = ['id', 'nombreEnfermedad','TipoEnfermedad','accion01']
   constructor(private tcS:TipoEnfermedadeService){
   }
 

@@ -56,7 +56,7 @@ export class TipoenfermedadCreareditarComponent implements OnInit {
           });
         });
       }
-      this.router.navigate(['Enfermedades']);
+      this.router.navigate(['Enfermedad']);
     } else {
       this.mensaje = 'Ingrese el nombre de la enfermedad!!!';
     }

@@ -57,23 +57,23 @@ module.exports = function(){
     TiposEnfermedades: [
       {
         id: 1,
-        nombreEnfermedad: "Infecciones respiratorias",
-        TipoEnfermedad:"Asma"
+        nombreEnfermedad: "Asma",
+        TipoEnfermedad:"Infecciones respiratorias"
       },
       {
         id: 2,
-        nombreEnfermedad: "Infecciones gastrointestinales",
-        TipoEnfermedad:"Gastritis"
+        nombreEnfermedad: "Gastritis",
+        TipoEnfermedad:"Infecciones gastrointestinales"
       },
       {
         id: 3,
-        nombreEnfermedad: "Infecciones de la piel",
-        TipoEnfermedad:"Bitiligo"
+        nombreEnfermedad: "Bitiligo",
+        TipoEnfermedad:"Infecciones de la piel",
       },
       {
         id: 4,
-        nombreEnfermedad: "Problemas de oído",
-        TipoEnfermedad:"Sordera parcial"
+        nombreEnfermedad: "Sordera parcial",
+        TipoEnfermedad:"Problemas de oído",
       },
     ],
   }
