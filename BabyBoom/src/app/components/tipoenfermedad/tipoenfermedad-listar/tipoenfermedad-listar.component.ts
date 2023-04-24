@@ -11,14 +11,16 @@ import { TipoEnfermedadeService } from 'src/app/service/tipoenfermedad.service'
 export class TipoenfermedadListarComponent implements OnInit{
   lista:Tipoenfermedad[] = [];
   dataSource:MatTableDataSource<Tipoenfermedad> = new MatTableDataSource();
-  displayedColumns:string[] = ['IDTipoEnfermedad', 'nombreEnfermedad','TipoEnfermedad']
+  displayedColumns:string[] = ['id', 'nombreEnfermedad','TipoEnfermedad']
   constructor(private tcS:TipoEnfermedadeService){
   }
 
 
   ngOnInit(): void {
-      this.tcS.list().subscribe(data=>{
+      this.tcS.list().subscribe((data)=>{
         this.dataSource = new MatTableDataSource(data);
-      })
+      });
+
+
   }
 }

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div style="text-align: center">
+        <h1>Registro de Enfermedades</h1>
+      </div>
+
+      <form [formGroup]="form" (submit)="aceptar()">
+        <mat-form-field class="example-full-width">
+          <mat-label>Id</mat-label>
+          <input matInput placeholder="Id" formControlName="id" />
+        </mat-form-field>
+        <br />
+        <mat-form-field class="example-full-width">
+          <mat-label>Nombre</mat-label>
+          <input matInput placeholder="Nombre" formControlName="namePet" />
+        </mat-form-field>
+        <br />
+        <mat-form-field appearance="fill">
+          <mat-label>Tipo</mat-label>
+          <mat-select placeholder="Placeholder" formControlName="genderPet">
+            <mat-option value="Hembra">Hembra</mat-option>
+            <mat-option value="Macho">Macho</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <br />
+
+        <mat-form-field appearance="fill">
+          <mat-label>Fecha de nacimiento</mat-label>
+          <input
+            matInput
+            [matDatepicker]="picker"
+            formControlName="birthDatePet"
+            placeholder="Choose a date"
+          />
+          <mat-datepicker-toggle [for]="picker"></mat-datepicker-toggle
+          ><mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <br />
+
+        <div style="text-align: center">
+          <button mat-raised-button color="primary">Aceptar</button>
+          <button mat-raised-button color="warn" routerLink="/pets">
+            Cancelar
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
+

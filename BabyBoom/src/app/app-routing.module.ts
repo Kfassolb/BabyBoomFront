@@ -6,6 +6,8 @@ import { TipocomprobanteComponent } from './components/tipocomprobante/tipocompr
 import { TipocomprobanteListarComponent } from './components/tipocomprobante/tipocomprobante-listar/tipocomprobante-listar.component';
 import { ServicioComponent } from './components/servicio/servicio.component';
 import { ServicioListarComponent } from './components/servicio/servicio-listar/servicio-listar.component';
+import { TipoenfermedadComponent } from './components/tipoenfermedad/tipoenfermedad.component';
+import { TipoenfermedadListarComponent } from './components/tipoenfermedad/tipoenfermedad-listar/tipoenfermedad-listar.component';
 
 const routes: Routes = [
   {
@@ -24,8 +26,8 @@ const routes: Routes = [
     ],
   },
   {
-    path: 'Enfermedad', component:ServicioComponent, children: [
-      {path:'agregar', component:ServicioListarComponent}
+    path: 'Enfermedad', component:TipoenfermedadComponent, children: [
+      {path:'agregar', component:TipoenfermedadListarComponent}
     ],
   }
 ];

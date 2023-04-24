@@ -56,22 +56,22 @@ module.exports = function(){
     ],
     TiposEnfermedades: [
       {
-        IDTipoEnfermedad: 1,
+        id: 1,
         nombreEnfermedad: "Infecciones respiratorias",
         TipoEnfermedad:"Asma"
       },
       {
-        IDTipoEnfermedad: 2,
+        id: 2,
         nombreEnfermedad: "Infecciones gastrointestinales",
         TipoEnfermedad:"Gastritis"
       },
       {
-        IDTipoEnfermedad: 3,
+        id: 3,
         nombreEnfermedad: "Infecciones de la piel",
         TipoEnfermedad:"Bitiligo"
       },
       {
-        IDTipoEnfermedad: 4,
+        id: 4,
         nombreEnfermedad: "Problemas de oído",
         TipoEnfermedad:"Sordera parcial"
       },
