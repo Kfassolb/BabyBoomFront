@@ -13,7 +13,7 @@ import { UsuarioComponent } from './components/usuario/usuario.component';
 import { UsuarioListarComponent } from './components/usuario/usuario-listar/usuario-listar.component';
 import { ProductoComponent } from './components/producto/producto.component';
 import { ProductoListarComponent } from './components/producto/producto-listar/producto-listar.component';
-import { ProductoCreaeditaComponent } from './component/producto/producto-creaedita/producto-creaedita.component';
+import { ProductoCreaeditaComponent } from './components/producto/producto-creaedita/producto-creaedita.component';
 
 @NgModule({
   declarations: [
