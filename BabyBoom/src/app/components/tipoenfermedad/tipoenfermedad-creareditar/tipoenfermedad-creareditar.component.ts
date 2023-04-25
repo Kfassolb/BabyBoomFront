@@ -66,7 +66,7 @@ export class TipoenfermedadCreareditarComponent implements OnInit {
     if (this.edicion) {
       this.pS.listId(this.id).subscribe((data) => {
         this.form = new FormGroup({
-          IDTipoEnfermedad: new FormControl(data.id),
+          id: new FormControl(data.id),
           nombreEnfermedad: new FormControl(data.nombreEnfermedad),
           TipoEnfermedad: new FormControl(data.TipoEnfermedad),
 
