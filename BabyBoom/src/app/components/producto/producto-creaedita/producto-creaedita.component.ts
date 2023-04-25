@@ -28,16 +28,20 @@ export class ProductoCreaeditaComponent implements OnInit{
 
     this.form = new FormGroup({
       id:new FormControl(),
-      nombre:new FormControl(),
+      Nombre:new FormControl(),
+      Tipo:new FormControl(),
+      Cantidad:new FormControl(),
+      PrecioUnitario:new FormControl(),
+
     })
   }
   aceptar():void{
     this.producto.id = this.form.value['id'];
-    this.producto.Nombre = this.form.value['nombre'];
-    this.producto.Tipo = this.form.value['tipo'];
-    this.producto.Cantidad = this.form.value['cantidad'];
-    this.producto.PrecioUnitario = this.form.value['precioUnitario'];
-    if(this.form.value['nombre'].length>0){
+    this.producto.Nombre = this.form.value['Nombre'];
+    this.producto.Tipo = this.form.value['Tipo'];
+    this.producto.Cantidad = this.form.value['Cantidad'];
+    this.producto.PrecioUnitario = this.form.value['PrecioUnitario'];
+    if(this.form.value['Nombre'].length>0){
       if(this.edicion){
         this.pS.update(this.producto).subscribe(()=>{
           this.pS.list().subscribe(data=>{
