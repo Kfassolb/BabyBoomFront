@@ -12,8 +12,9 @@ const routes: Routes = [
     ]
   },
   {
-    path:'servicio', component:ServicioCompoment, children:[
-      {path:'servicioeditar',component:ServicioCreaditaComponent}
+    path:'servicio', component:ServicioCompoment,children:[
+      {path:'servicioeditar',component:ServicioCreaditaComponent},
+      { path: 'edicion/:id', component: ServicioCreaditaComponent }
     ]
   }
 ];

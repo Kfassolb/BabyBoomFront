@@ -9,7 +9,9 @@ const base_url = environment.base
 })
 export class ServicioService {
 private url=`${base_url}/servicio`
-private listCambio=new Subject<Servicio[]>();
+private listaCambio=new Subject<Servicio[]>()
+private confirmaEliminacion = new Subject<Boolean>()
+
 constructor(private http:HttpClient) { }
 
 list() {
@@ -19,10 +21,25 @@ insert(servicio: Servicio) {
   return this.http.post(this.url, servicio);
 }
 setList(listaNueva: Servicio[]) {
-  this.listCambio.next(listaNueva);
+  this.listaCambio.next(listaNueva);
 }
-getList() {
-  return this.listCambio.asObservable();
+getLista() {
+  return this.listaCambio.asObservable();
 }
+modificar(servicio: Servicio) {
+  return this.http.put(this.url + "/" + servicio.id, servicio);
+}
+listarId(id: number) {
+  return this.http.get<Servicio>(`${this.url}/${id}`);
+}
+eliminar(id: number) {
 
+  return this.http.delete(`${this.url}/${id}`);
+}
+getConfirmaEliminacion() {
+  return this.confirmaEliminacion.asObservable();
+}
+setConfirmaEliminacion(estado: Boolean) {
+  this.confirmaEliminacion.next(estado);
+}
 }
