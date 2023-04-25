@@ -24,7 +24,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { TipoenfermedadComponent } from './components/tipoenfermedad/tipoenfermedad.component';
 import { TipoenfermedadListarComponent } from './components/tipoenfermedad/tipoenfermedad-listar/tipoenfermedad-listar.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { TipoenfermedadCreareditarComponent } from './components/tipoenfermedad/tipoenfermedad-creareditar/tipoenfermedad-creareditar.component'
+import { TipoenfermedadCreareditarComponent } from './components/tipoenfermedad/tipoenfermedad-creareditar/tipoenfermedad-creareditar.component';
+import { TipoenfermedadDialogoComponent } from './components/tipoenfermedad/tipoenfermedad-listar/tipoenfermedad-dialogo/tipoenfermedad-dialogo.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 @NgModule({
@@ -40,6 +42,7 @@ import { TipoenfermedadCreareditarComponent } from './components/tipoenfermedad/
     TipoenfermedadComponent,
     TipoenfermedadListarComponent,
     TipoenfermedadCreareditarComponent,
+    TipoenfermedadDialogoComponent,
 
   ],
   imports: [
@@ -58,6 +61,7 @@ import { TipoenfermedadCreareditarComponent } from './components/tipoenfermedad/
     BrowserAnimationsModule,
     MatIconModule,
     MatSlideToggleModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
