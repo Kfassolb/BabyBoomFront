@@ -16,7 +16,6 @@ const routes: Routes = [
       {path:'agregar', component:UsuarioCreaeditaComponent}
     ]
   },
-  dsedwsdes
   {
    path:'tipocomprobantes', component:TipocomprobanteComponent, children:[
       {path:'tipocomprobanteeditar',component:TipocomprobanteCreaeditaComponent},
