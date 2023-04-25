@@ -36,7 +36,7 @@ export class UsuarioCreaeditaComponent implements OnInit{
     this.usuario.Username = this.form.value['Username'];
     this.usuario.Password = this.form.value['Password'];
 
-    if (this.form.value['Username'].length>0) {
+    if (this.form.value['Username'].length>0 && this.form.value['Password'].length>0) {
       if (this.edicion) {
         this.uS.update(this.usuario).subscribe(()=>{
           this.uS.list().subscribe(data=>{
@@ -52,7 +52,7 @@ export class UsuarioCreaeditaComponent implements OnInit{
       }
       this.router.navigate(['Usuario']);
     }else{
-      this.mensaje = "Ingrese el nombre de usuario!!";
+      this.mensaje = "Ingrese los valores solicitados!";
     }
   }
 

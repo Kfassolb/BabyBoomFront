@@ -12,6 +12,8 @@ const base_url = environment.base;
 export class UsuarioService {
   private url = `${base_url}/Usuario`;
   private listCambio=new Subject<Usuario[]>();
+  private confirmDeletion = new Subject<Boolean>();
+
   constructor(private http: HttpClient) {}
   list() {
     return this.http.get<Usuario[]>(this.url);
@@ -30,5 +32,14 @@ export class UsuarioService {
   }
   update(usuario:Usuario){
     return this.http.put(this.url + "/" + usuario.id, usuario);
+  }
+  delete(id:number){
+    return this.http.delete(`${this.url}/${id}`);
+  }
+  getConfirmDeletion(){
+    return this.confirmDeletion.asObservable();
+  }
+  setConfirmDeletion(estado:boolean){
+    return this.confirmDeletion.next(estado);
   }
 }

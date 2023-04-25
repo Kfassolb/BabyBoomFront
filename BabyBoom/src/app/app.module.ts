@@ -23,7 +23,9 @@ import { ServicioListarComponent } from './components/servicio/servicio-listar/s
 import { MatIconModule } from '@angular/material/icon';
 import { TipoenfermedadComponent } from './components/tipoenfermedad/tipoenfermedad.component';
 import { TipoenfermedadListarComponent } from './components/tipoenfermedad/tipoenfermedad-listar/tipoenfermedad-listar.component';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle'
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { UsuarioDialogoComponent } from './components/usuario/usuario-listar/usuario-dialogo/usuario-dialogo.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle'
     ServicioListarComponent,
     TipoenfermedadComponent,
     TipoenfermedadListarComponent,
+    UsuarioDialogoComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,6 +57,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle'
     BrowserAnimationsModule,
     MatIconModule,
     MatSlideToggleModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
