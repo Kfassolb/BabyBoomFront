@@ -11,7 +11,7 @@ import { UsuarioService } from 'src/app/service/usuario.service';
 export class UsuarioListarComponent implements OnInit{
   lista: Usuario[]=[];
   dataSource: MatTableDataSource<Usuario>=new MatTableDataSource();
-  displayedColumns: string[]=['id', 'username', 'password'];
+  displayedColumns: string[]=['id', 'username', 'password','actualizar'];
 
   constructor(private uS: UsuarioService){}
 

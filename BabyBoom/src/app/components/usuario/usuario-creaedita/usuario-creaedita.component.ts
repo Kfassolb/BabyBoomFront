@@ -1,6 +1,6 @@
 import { Component,OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Usuario } from 'src/app/model/usuario';
 import { UsuarioService } from 'src/app/service/usuario.service';
 
@@ -14,9 +14,17 @@ export class UsuarioCreaeditaComponent implements OnInit{
   usuario: Usuario = new Usuario();
   mensaje: String = "";
 
-  constructor(private uS:UsuarioService, private router:Router){};
+  id:number =0;
+  edicion:boolean = false;
+
+  constructor(private uS:UsuarioService, private router:Router, private route:ActivatedRoute){};
 
   ngOnInit(): void {
+    this.route.params.subscribe((data:Params)=>{
+      this.id = data['id'];
+      this.edicion = data['id']!=null;
+      this.init();
+    })
     this.form = new FormGroup({
       id: new FormControl(),
       Username: new FormControl(),
@@ -29,14 +37,34 @@ export class UsuarioCreaeditaComponent implements OnInit{
     this.usuario.Password = this.form.value['Password'];
 
     if (this.form.value['Username'].length>0) {
-      this.uS.insert(this.usuario).subscribe(data=>{
-        this.uS.list().subscribe (data=>{
-          this.uS.setList(data);
+      if (this.edicion) {
+        this.uS.update(this.usuario).subscribe(()=>{
+          this.uS.list().subscribe(data=>{
+            this.uS.setList(data);
+          })
         })
-      })
+      }else {
+        this.uS.insert(this.usuario).subscribe(data=>{
+          this.uS.list().subscribe (data=>{
+            this.uS.setList(data);
+          });
+        });
+      }
       this.router.navigate(['Usuario']);
     }else{
       this.mensaje = "Ingrese el nombre de usuario!!";
+    }
+  }
+
+  init(){
+    if(this.edicion){
+      this.uS.listId(this.id).subscribe(data=>{
+        this.form=new FormGroup({
+          id:new FormControl(data.id),
+          Username:new FormControl(data.Username),
+          Password:new FormControl(data.Password),
+        });
+      });
     }
   }
 }
