@@ -12,13 +12,14 @@ export class ProductoListarComponent implements OnInit {
   lista: Producto[] = [];
   dataSource: MatTableDataSource<Producto> = new MatTableDataSource();
   displayedColumns: string[] = ['id', 'nombre', 'tipo', 'cantidad', 'preciounitario'];
-
   constructor(private pS: ProductoService) {}
 
   ngOnInit(): void {
     this.pS.list().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
     });
-
-    };
+    this.pS.getList().subscribe(data=>{
+      this.dataSource= new MatTableDataSource(data);
+    });
   }
+}

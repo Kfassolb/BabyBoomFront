@@ -9,6 +9,7 @@ import { TipocomprobanteCreaeditaComponent } from './components/tipocomprobante/
 import { NgModule } from '@angular/core';
 import { ProductoComponent } from './components/producto/producto.component';
 import { ProductoListarComponent } from './components/producto/producto-listar/producto-listar.component';
+import { ProductoCreaeditaComponent } from './components/producto/producto-creaedita/producto-creaedita.component';
 
 const routes: Routes = [
   {
@@ -34,7 +35,7 @@ const routes: Routes = [
   },
   {
     path: 'Producto', component:ProductoComponent, children: [
-      {path:'agregar', component:ProductoListarComponent}
+      {path:'agregar', component:ProductoCreaeditaComponent}
     ],
   }
 ];
