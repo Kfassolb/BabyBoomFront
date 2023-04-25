@@ -7,6 +7,8 @@ import { ServicioListarComponent } from './components/servicio/servicio-listar/s
 import { RouterModule, Routes } from '@angular/router';
 import { TipocomprobanteCreaeditaComponent } from './components/tipocomprobante/tipocomprobante-creaedita/tipocomprobante-creaedita.component';
 import { NgModule } from '@angular/core';
+import { ProductoComponent } from './components/producto/producto.component';
+import { ProductoListarComponent } from './components/producto/producto-listar/producto-listar.component';
 
 const routes: Routes = [
   {
@@ -28,6 +30,11 @@ const routes: Routes = [
   {
     path: 'Enfermedad', component:ServicioComponent, children: [
       {path:'agregar', component:ServicioListarComponent}
+    ],
+  },
+  {
+    path: 'Producto', component:ProductoComponent, children: [
+      {path:'agregar', component:ProductoListarComponent}
     ],
   }
 ];

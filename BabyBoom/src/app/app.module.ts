@@ -25,7 +25,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { TipoenfermedadComponent } from './components/tipoenfermedad/tipoenfermedad.component';
 import { TipoenfermedadListarComponent } from './components/tipoenfermedad/tipoenfermedad-listar/tipoenfermedad-listar.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle'
-
+import { ProductoComponent } from './components/producto/producto.component';
+import { ProductoListarComponent } from './components/producto/producto-listar/producto-listar.component';
+import { ProductoCreaeditaComponent } from './components/producto/producto-creaedita/producto-creaedita.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,6 +41,9 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle'
     TipocomprobanteCreaeditaComponent,
     TipoenfermedadComponent,
     TipoenfermedadListarComponent,
+    ProductoComponent,
+    ProductoListarComponent,
+    ProductoCreaeditaComponent,
   ],
   imports: [
     BrowserModule,

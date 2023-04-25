@@ -1,5 +1,5 @@
 export class Producto{
-  IDproducto: number=0
+  id: number=0
         Nombre: string=""
         Tipo: string=""
         Cantidad: number=0
