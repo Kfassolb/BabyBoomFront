@@ -32,7 +32,7 @@ export class ProductoCreaeditaComponent implements OnInit{
     })
   }
   aceptar():void{
-    this.producto.id = this.form.value['idproducto'];
+    this.producto.id = this.form.value['id'];
     this.producto.Nombre = this.form.value['nombre'];
     this.producto.Tipo = this.form.value['tipo'];
     this.producto.Cantidad = this.form.value['cantidad'];
