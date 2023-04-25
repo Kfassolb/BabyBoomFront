@@ -11,7 +11,7 @@ import { ProductoService } from 'src/app/service/producto.service';
 export class ProductoListarComponent implements OnInit {
   lista: Producto[] = [];
   dataSource: MatTableDataSource<Producto> = new MatTableDataSource();
-  displayedColumns: string[] = ['id', 'nombre', 'tipo', 'cantidad', 'preciounitario'];
+  displayedColumns: string[] = ['id', 'nombre', 'tipo', 'cantidad', 'preciounitario','accion1'];
   constructor(private pS: ProductoService) {}
 
   ngOnInit(): void {

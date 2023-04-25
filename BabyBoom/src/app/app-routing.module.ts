@@ -35,7 +35,8 @@ const routes: Routes = [
   },
   {
     path: 'Producto', component:ProductoComponent, children: [
-      {path:'agregar', component:ProductoCreaeditaComponent}
+      {path:'agregar', component:ProductoCreaeditaComponent},
+      {path:'edicion/:id',component:ProductoCreaeditaComponent},
     ],
   }
 ];
