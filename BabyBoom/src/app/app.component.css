@@ -1,0 +1,11 @@
+#navbarNav {
+  margin-left: 22rem;
+}
+.navbar-nav a:hover{
+  color: white;
+}
+.navbar-nav a:active{
+  color: white;
+}
+
+
