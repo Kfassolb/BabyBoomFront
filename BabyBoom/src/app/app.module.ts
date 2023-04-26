@@ -21,7 +21,8 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatButtonModule} from '@angular/material/button';
 import { ServicioCreaditaComponent } from './components/servicio/servicio-creadita/servicio-creadita.component';
 import { ServicioCompoment } from './components/servicio/servicio.component';
-import { MatDialogModule } from '@angular/material/dialog'
+import { MatDialogModule } from '@angular/material/dialog';
+import { ServicioDialogoComponent } from './components/servicio/servicio-listar/servicio-dialogo/servicio-dialogo.component'
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { MatDialogModule } from '@angular/material/dialog'
     TipocomprobanteCreaeditaComponent,
     ServicioCreaditaComponent,
     ServicioCompoment,
+    ServicioDialogoComponent,
   ],
   imports: [
     BrowserModule,

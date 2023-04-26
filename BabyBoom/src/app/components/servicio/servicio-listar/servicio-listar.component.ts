@@ -3,6 +3,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { ServicioService } from 'src/app/service/servicio.service';
 import {  Servicio } from 'src/app/model/Servicio'
 import { MatDialog } from '@angular/material/dialog'
+import { ServicioDialogoComponent } from './servicio-dialogo/servicio-dialogo.component';
 
 @Component({
   selector: 'app-servicio-listar',
@@ -30,7 +31,7 @@ private idMayor: number = 0;
   }
   confirmar(id: number) {
     this.idMayor = id;
-    //this.dialog.open(ServicioDialogoComponent);
+    this.dialog.open(ServicioDialogoComponent);
   }
   eliminar(id: number) {
     this.Ss.eliminar(id).subscribe(() => {
