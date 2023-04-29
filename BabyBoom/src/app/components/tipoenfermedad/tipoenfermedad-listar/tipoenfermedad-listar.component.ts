@@ -11,6 +11,9 @@ import { TipoenfermedadDialogoComponent } from './tipoenfermedad-dialogo/tipoenf
   styleUrls: ['./tipoenfermedad-listar.component.css']
 })
 export class TipoenfermedadListarComponent implements OnInit{
+filter($event: KeyboardEvent) {
+throw new Error('Method not implemented.');
+}
   lista:Tipoenfermedad[] = [];
   dataSource:MatTableDataSource<Tipoenfermedad> = new MatTableDataSource();
   displayedColumns:string[] = ['id', 'nombreEnfermedad','TipoEnfermedad','accion01']
