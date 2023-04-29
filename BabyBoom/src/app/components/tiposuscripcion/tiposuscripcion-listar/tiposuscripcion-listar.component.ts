@@ -12,13 +12,16 @@ export class TiposuscripcionListarComponent implements OnInit {
 
   lista:Tiposuscripcion[] = [];
   dataSource:MatTableDataSource<Tiposuscripcion> = new MatTableDataSource();
-  displayedColumns:string[] = ['id', 'tipoSuscripcion']
+  displayedColumns:string[] = ['id', 'tipoSuscripcion','accion01']
   constructor(private tcS:TiposuscripcionService){
 
   }
   ngOnInit(): void {
       this.tcS.list().subscribe(data=>{
         this.dataSource = new MatTableDataSource(data);
+      });
+      this.tcS.getList().subscribe(data=>{
+        this.dataSource=new MatTableDataSource(data);
       })
   }
 }
