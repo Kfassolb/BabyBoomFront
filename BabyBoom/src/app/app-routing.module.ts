@@ -8,6 +8,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { TipocomprobanteCreaeditaComponent } from './components/tipocomprobante/tipocomprobante-creaedita/tipocomprobante-creaedita.component';
 import { NgModule } from '@angular/core';
 
+import { TipoenfermedadComponent } from './components/tipoenfermedad/tipoenfermedad.component';
+import { TipoenfermedadListarComponent } from './components/tipoenfermedad/tipoenfermedad-listar/tipoenfermedad-listar.component';
+import { TipoenfermedadCreareditarComponent } from './components/tipoenfermedad/tipoenfermedad-creareditar/tipoenfermedad-creareditar.component';
 const routes: Routes = [
   {
     path: 'Usuario', component:UsuarioComponent, children: [
@@ -26,8 +29,9 @@ const routes: Routes = [
     ],
   },
   {
-    path: 'Enfermedad', component:ServicioComponent, children: [
-      {path:'agregar', component:ServicioListarComponent}
+    path: 'Enfermedad', component:TipoenfermedadComponent, children: [
+      {path:'agregar', component:TipoenfermedadCreareditarComponent},
+      {path: 'edicion/:id',component:TipoenfermedadCreareditarComponent},
     ],
   }
 ];

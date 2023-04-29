@@ -26,9 +26,12 @@ import { TipoenfermedadComponent } from './components/tipoenfermedad/tipoenferme
 import { TipoenfermedadListarComponent } from './components/tipoenfermedad/tipoenfermedad-listar/tipoenfermedad-listar.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { TipocomprobanteDialogoComponent } from './components/tipocomprobante/tipocomprobante-listar/tipocomprobante-dialogo/tipocomprobante-dialogo.component';
-import { MatDialogModule } from '@angular/material/dialog';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatButtonModule } from '@angular/material/button';
+import { TipoenfermedadCreareditarComponent } from './components/tipoenfermedad/tipoenfermedad-creareditar/tipoenfermedad-creareditar.component';
+import { TipoenfermedadDialogoComponent } from './components/tipoenfermedad/tipoenfermedad-listar/tipoenfermedad-dialogo/tipoenfermedad-dialogo.component';
+import { MatDialogModule } from '@angular/material/dialog';
+
 
 @NgModule({
   declarations: [
@@ -43,7 +46,9 @@ import { MatButtonModule } from '@angular/material/button';
     TipocomprobanteCreaeditaComponent,
     TipoenfermedadComponent,
     TipoenfermedadListarComponent,
-    TipocomprobanteDialogoComponent
+    TipocomprobanteDialogoComponent,
+    TipoenfermedadCreareditarComponent,
+    TipoenfermedadDialogoComponent,
 
   ],
   imports: [
