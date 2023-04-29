@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatTableModule} from '@angular/material/table';
 import { UsuarioComponent } from './components/usuario/usuario.component';
 import { UsuarioListarComponent } from './components/usuario/usuario-listar/usuario-listar.component'
+
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { UsuarioCreaeditaComponent } from './components/usuario/usuario-creaedita/usuario-creaedita.component';
@@ -18,13 +19,16 @@ import { ServicioComponent } from './components/servicio/servicio.component';
 import { TipocomprobanteCreaeditaComponent } from './components/tipocomprobante/tipocomprobante-creaedita/tipocomprobante-creaedita.component'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatNativeDateModule } from '@angular/material/core';
-import {MatDatepickerModule} from '@angular/material/datepicker';
-import {MatButtonModule} from '@angular/material/button';
+
 import { ServicioListarComponent } from './components/servicio/servicio-listar/servicio-listar.component'
 import { MatIconModule } from '@angular/material/icon';
 import { TipoenfermedadComponent } from './components/tipoenfermedad/tipoenfermedad.component';
 import { TipoenfermedadListarComponent } from './components/tipoenfermedad/tipoenfermedad-listar/tipoenfermedad-listar.component';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle'
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { TipocomprobanteDialogoComponent } from './components/tipocomprobante/tipocomprobante-listar/tipocomprobante-dialogo/tipocomprobante-dialogo.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -39,6 +43,8 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle'
     TipocomprobanteCreaeditaComponent,
     TipoenfermedadComponent,
     TipoenfermedadListarComponent,
+    TipocomprobanteDialogoComponent
+
   ],
   imports: [
     BrowserModule,
@@ -56,6 +62,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle'
     BrowserAnimationsModule,
     MatIconModule,
     MatSlideToggleModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
