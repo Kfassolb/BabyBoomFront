@@ -10,6 +10,7 @@ const base_url = environment.base
 export class TipocomprobanteService {
   private url = `${base_url}/tipocomprobantes`
   private listCambio = new Subject<Tipocomprobante[]>();
+  private confirmarEliminacion = new Subject<Boolean>()
   constructor(private http:HttpClient) { }
   list(){
     return this.http.get<Tipocomprobante[]>(this.url);
@@ -31,4 +32,13 @@ export class TipocomprobanteService {
     return this.http.put(this.url+"/"+tipocomprobante.id,tipocomprobante);
   }
 
+  eliminar(id:number){
+    return this.http.delete(`${this.url}/${id}`);
+  }
+  getConfirmarEliminar(){
+    return this.confirmarEliminacion.asObservable();
+  }
+  setConfirmarEliminacion(estado: Boolean){
+    this.confirmarEliminacion.next(estado);
+  }
 }

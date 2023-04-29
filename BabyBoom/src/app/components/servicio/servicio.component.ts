@@ -6,8 +6,8 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./servicio.component.css']
 })
 export class ServicioComponent implements OnInit{
-  constructor(public route:ActivatedRoute){}
-  ngOnInit(): void {
 
+  ngOnInit(): void {}
+
+  constructor(public route:ActivatedRoute){}
   }
-}
