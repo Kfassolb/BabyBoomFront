@@ -27,7 +27,7 @@ export class TipocomprobanteListarComponent implements OnInit{
         this.dataSource= new MatTableDataSource(data);
       });
       this.tcS.getConfirmarEliminar().subscribe(data=>{
-        data == true ? this.eliminar(this.idMayor) : false;
+        data == true ? this.eliminar(this.idMayor):false;
       })
   }
   confirmar(id: number){
