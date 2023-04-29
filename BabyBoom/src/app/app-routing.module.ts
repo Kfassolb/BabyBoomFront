@@ -5,7 +5,7 @@ import { TiposuscripcionCreaeditaComponent } from './components/tiposuscripcion/
 
 const routes: Routes = [
   {
-  path:'Suscripcion', component:TiposuscripcionComponent,children:[
+  path:'TiposSuscripcion', component:TiposuscripcionComponent,children:[
     {path:'Suscripcioneditar', component:TiposuscripcionCreaeditaComponent},
     {path:'edicion/:id', component:TiposuscripcionCreaeditaComponent},
   ],

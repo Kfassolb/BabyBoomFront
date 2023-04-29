@@ -12,7 +12,7 @@ export class TiposuscripcionListarComponent implements OnInit {
 
   lista:Tiposuscripcion[] = [];
   dataSource:MatTableDataSource<Tiposuscripcion> = new MatTableDataSource();
-  displayedColumns:string[] = ['id', 'tipoSuscripcion','accion01']
+  displayedColumns:string[] = ['id', 'tiposuscripcion','accion01']
   constructor(private tcS:TiposuscripcionService){
 
   }
