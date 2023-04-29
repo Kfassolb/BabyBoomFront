@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { UsuarioComponent } from './components/usuario/usuario.component';
 import { UsuarioCreaeditaComponent } from './components/usuario/usuario-creaedita/usuario-creaedita.component';
 import { TipocomprobanteComponent } from './components/tipocomprobante/tipocomprobante.component';
@@ -46,10 +47,24 @@ const routes: Routes = [
       { path: 'edicion/:id', component: ServicioCreaditaComponent }
     ]
   }
+=======
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { TiposuscripcionComponent } from './components/tiposuscripcion/tiposuscripcion.component';
+import { TiposuscripcionCreaeditaComponent } from './components/tiposuscripcion/tiposuscripcion-creaedita/tiposuscripcion-creaedita.component';
+
+const routes: Routes = [
+  {
+  path:'Suscripcion', component:TiposuscripcionComponent,children:[
+    {path:'Suscripcioneditar', component:TiposuscripcionCreaeditaComponent},
+    {path:'edicion/:id', component:TiposuscripcionCreaeditaComponent},
+  ],
+},
+>>>>>>> Bill
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule { }

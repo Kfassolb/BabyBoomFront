@@ -98,6 +98,20 @@ module.exports = function(){
         id: 4,
         nombreEnfermedad: "Sordera parcial",
         TipoEnfermedad:"Problemas de oído",
+      }
+    ],
+    TiposSuscripcion: [
+      {
+        id: 1,
+        nombreSuscripcion: "Gratuito",
+      },
+      {
+        id: 2,
+        nombreSuscripcion: "Premium mensual",
+      },
+      {
+        id: 3,
+        nombreSuscripcion: "Premium anual",
       },
     ],
   }

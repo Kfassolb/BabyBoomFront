@@ -8,14 +8,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import {MatTableModule} from '@angular/material/table';
 import { UsuarioComponent } from './components/usuario/usuario.component';
-import { UsuarioListarComponent } from './components/usuario/usuario-listar/usuario-listar.component'
-import { MatInputModule } from '@angular/material/input';
-import { MatSelectModule } from '@angular/material/select';
 import { UsuarioCreaeditaComponent } from './components/usuario/usuario-creaedita/usuario-creaedita.component';
 import { TipocomprobanteCreaeditaComponent } from './components/tipocomprobante/tipocomprobante-creaedita/tipocomprobante-creaedita.component'
+import { ServicioCreaditaComponent } from './components/servicio/servicio-creadita/servicio-creadita.component';
+import { UsuarioListarComponent } from './components/usuario/usuario-listar/usuario-listar.component';
+import { TiposuscripcionComponent } from './components/tiposuscripcion/tiposuscripcion.component';
+import { TiposuscripcionListarComponent } from './components/tiposuscripcion/tiposuscripcion-listar/tiposuscripcion-listar.component';
+import { TiposuscripcionCreaeditaComponent } from './components/tiposuscripcion/tiposuscripcion-creaedita/tiposuscripcion-creaedita.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatNativeDateModule } from '@angular/material/core';
-import { ServicioCreaditaComponent } from './components/servicio/servicio-creadita/servicio-creadita.component';
+import{MatInputModule} from '@angular/material/input'
+import{MatSelectModule} from '@angular/material/select'
+
 
 import { ServicioComponent } from './components/servicio/servicio.component';
 import { ServicioDialogoComponent } from './components/servicio/servicio-listar/servicio-dialogo/servicio-dialogo.component'
@@ -61,6 +65,9 @@ import { ProductoCreaeditaComponent } from './components/producto/producto-creae
     TipocomprobanteCreaeditaComponent,
     ServicioCreaditaComponent,
     ServicioDialogoComponent,
+    TiposuscripcionComponent,
+    TiposuscripcionListarComponent,
+    TiposuscripcionCreaeditaComponent,
   ],
   imports: [
     BrowserModule,
@@ -80,7 +87,6 @@ import { ProductoCreaeditaComponent } from './components/producto/producto-creae
     MatSlideToggleModule,
     MatDialogModule,
     MatPaginatorModule,
-    MatDialogModule,
 
   ],
   providers: [],
