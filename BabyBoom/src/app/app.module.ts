@@ -35,6 +35,9 @@ import { UsuarioDialogoComponent } from './components/usuario/usuario-listar/usu
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatPaginatorModule } from '@angular/material/paginator';
 
+import { ProductoComponent } from './components/producto/producto.component';
+import { ProductoListarComponent } from './components/producto/producto-listar/producto-listar.component';
+import { ProductoCreaeditaComponent } from './components/producto/producto-creaedita/producto-creaedita.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,6 +56,9 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     TipoenfermedadDialogoComponent,
 
     UsuarioDialogoComponent,
+    ProductoComponent,
+    ProductoListarComponent,
+    ProductoCreaeditaComponent,
   ],
   imports: [
     BrowserModule,

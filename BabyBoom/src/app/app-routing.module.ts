@@ -7,6 +7,9 @@ import { ServicioListarComponent } from './components/servicio/servicio-listar/s
 import { RouterModule, Routes } from '@angular/router';
 import { TipocomprobanteCreaeditaComponent } from './components/tipocomprobante/tipocomprobante-creaedita/tipocomprobante-creaedita.component';
 import { NgModule } from '@angular/core';
+import { ProductoComponent } from './components/producto/producto.component';
+import { ProductoListarComponent } from './components/producto/producto-listar/producto-listar.component';
+import { ProductoCreaeditaComponent } from './components/producto/producto-creaedita/producto-creaedita.component';
 
 import { TipoenfermedadComponent } from './components/tipoenfermedad/tipoenfermedad.component';
 import { TipoenfermedadListarComponent } from './components/tipoenfermedad/tipoenfermedad-listar/tipoenfermedad-listar.component';
@@ -33,6 +36,12 @@ const routes: Routes = [
     path: 'Enfermedad', component:TipoenfermedadComponent, children: [
       {path:'agregar', component:TipoenfermedadCreareditarComponent},
       {path: 'edicion/:id',component:TipoenfermedadCreareditarComponent},
+    ],
+  },
+  {
+    path: 'Producto', component:ProductoComponent, children: [
+      {path:'agregar', component:ProductoCreaeditaComponent},
+      {path:'edicion/:id',component:ProductoCreaeditaComponent},
     ],
   }
 ];

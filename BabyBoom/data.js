@@ -54,6 +54,30 @@ module.exports = function(){
         NombreServicio:"Siesta bebe",
       },
     ],
+    Producto: [
+      {
+        id:1,
+        Nombre:"Babero",
+        Tipo:"Prenda",
+        Cantidad:2,
+        PrecioUnitario:10 ,
+      },
+      {
+        id:2,
+        Nombre:"Coche",
+        Tipo:"Transporte",
+        Cantidad:1,
+        PrecioUnitario:350,
+      },
+      {
+        id:3,
+        Nombre:"Sonaja",
+        Tipo:"Juguete",
+        Cantidad:5,
+        PrecioUnitario:8,
+
+      },
+    ],
     TiposEnfermedades: [
       {
         id: 1,
