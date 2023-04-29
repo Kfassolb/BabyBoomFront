@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { UsuarioComponent } from './components/usuario/usuario.component';
 import { UsuarioCreaeditaComponent } from './components/usuario/usuario-creaedita/usuario-creaedita.component';
 import { TipocomprobanteComponent } from './components/tipocomprobante/tipocomprobante.component';
@@ -16,6 +15,8 @@ import { ServicioCreaditaComponent } from './components/servicio/servicio-creadi
 import { TipoenfermedadComponent } from './components/tipoenfermedad/tipoenfermedad.component';
 import { TipoenfermedadListarComponent } from './components/tipoenfermedad/tipoenfermedad-listar/tipoenfermedad-listar.component';
 import { TipoenfermedadCreareditarComponent } from './components/tipoenfermedad/tipoenfermedad-creareditar/tipoenfermedad-creareditar.component';
+import { TiposuscripcionComponent } from './components/tiposuscripcion/tiposuscripcion.component';
+import { TiposuscripcionCreaeditaComponent } from './components/tiposuscripcion/tiposuscripcion-creaedita/tiposuscripcion-creaedita.component';
 const routes: Routes = [
   {
     path: 'Usuario', component:UsuarioComponent, children: [
@@ -46,21 +47,13 @@ const routes: Routes = [
       {path:'servicioeditar',component:ServicioCreaditaComponent},
       { path: 'edicion/:id', component: ServicioCreaditaComponent }
     ]
-  }
-=======
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { TiposuscripcionComponent } from './components/tiposuscripcion/tiposuscripcion.component';
-import { TiposuscripcionCreaeditaComponent } from './components/tiposuscripcion/tiposuscripcion-creaedita/tiposuscripcion-creaedita.component';
-
-const routes: Routes = [
+  },
   {
-  path:'Suscripcion', component:TiposuscripcionComponent,children:[
-    {path:'Suscripcioneditar', component:TiposuscripcionCreaeditaComponent},
-    {path:'edicion/:id', component:TiposuscripcionCreaeditaComponent},
-  ],
-},
->>>>>>> Bill
+    path:'Suscripcion', component:TiposuscripcionComponent,children:[
+      {path:'Suscripcioneditar', component:TiposuscripcionCreaeditaComponent},
+      {path:'edicion/:id', component:TiposuscripcionCreaeditaComponent},
+    ],
+  },
 ];
 
 @NgModule({

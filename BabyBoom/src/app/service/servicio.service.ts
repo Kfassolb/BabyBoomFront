@@ -1,13 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-<<<<<<< HEAD
 import { environment } from 'src/environments/environment';
-import { Servicio } from '../model/Servicio'
-=======
-import { environment } from 'src/environment/environment';
 import { Servicio } from '../model/Servicio';
 import { Subject } from 'rxjs';
->>>>>>> sheyla
 const base_url = environment.base
 @Injectable({
   providedIn: 'root',
