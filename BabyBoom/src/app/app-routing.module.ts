@@ -14,7 +14,8 @@ import { TipoenfermedadCreareditarComponent } from './components/tipoenfermedad/
 const routes: Routes = [
   {
     path: 'Usuario', component:UsuarioComponent, children: [
-      {path:'agregar', component:UsuarioCreaeditaComponent}
+      {path:'agregar', component:UsuarioCreaeditaComponent},
+      {path:'editar/:id', component:UsuarioCreaeditaComponent}
     ]
   },
   {

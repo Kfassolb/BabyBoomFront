@@ -30,8 +30,10 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatButtonModule } from '@angular/material/button';
 import { TipoenfermedadCreareditarComponent } from './components/tipoenfermedad/tipoenfermedad-creareditar/tipoenfermedad-creareditar.component';
 import { TipoenfermedadDialogoComponent } from './components/tipoenfermedad/tipoenfermedad-listar/tipoenfermedad-dialogo/tipoenfermedad-dialogo.component';
-import { MatDialogModule } from '@angular/material/dialog';
 
+import { UsuarioDialogoComponent } from './components/usuario/usuario-listar/usuario-dialogo/usuario-dialogo.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -50,6 +52,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     TipoenfermedadCreareditarComponent,
     TipoenfermedadDialogoComponent,
 
+    UsuarioDialogoComponent,
   ],
   imports: [
     BrowserModule,
@@ -67,7 +70,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     BrowserAnimationsModule,
     MatIconModule,
     MatSlideToggleModule,
-    MatDialogModule
+    MatDialogModule,
+    MatPaginatorModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
