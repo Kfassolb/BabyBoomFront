@@ -26,6 +26,7 @@ import { TipoenfermedadListarComponent } from './components/tipoenfermedad/tipoe
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { UsuarioDialogoComponent } from './components/usuario/usuario-listar/usuario-dialogo/usuario-dialogo.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     BrowserAnimationsModule,
     MatIconModule,
     MatSlideToggleModule,
-    MatDialogModule
+    MatDialogModule,
+    MatPaginatorModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

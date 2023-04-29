@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { Usuario } from 'src/app/model/usuario';
 import { UsuarioService } from 'src/app/service/usuario.service';
 import { MatDialog } from '@angular/material/dialog'
 import { UsuarioDialogoComponent } from './usuario-dialogo/usuario-dialogo.component';
+import { MatPaginator } from '@angular/material/paginator';
 
 @Component({
   selector: 'app-usuario-listar',
@@ -14,6 +15,7 @@ export class UsuarioListarComponent implements OnInit{
   lista: Usuario[]=[];
   dataSource: MatTableDataSource<Usuario>=new MatTableDataSource();
   displayedColumns: string[]=['id', 'username', 'password','actualizar'];
+  @ViewChild(MatPaginator) paginator!: MatPaginator; //THIS
   private idHigh:number=0;
 
   constructor(private uS: UsuarioService, private dialog:MatDialog){}
@@ -21,9 +23,11 @@ export class UsuarioListarComponent implements OnInit{
   ngOnInit(): void {
     this.uS.list().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
+      this.dataSource.paginator = this.paginator; //THIS
     })
     this.uS.getList().subscribe(data=>{
       this.dataSource=new MatTableDataSource(data);
+      this.dataSource.paginator = this.paginator; //THIS
     })
     this.uS.getConfirmDeletion().subscribe(data=>{
       data == true? this.delete(this.idHigh):false;
@@ -37,6 +41,8 @@ export class UsuarioListarComponent implements OnInit{
     this.uS.delete(id).subscribe(()=>{
       this.uS.list().subscribe(data=>{
         this.uS.setList(data); /* se ejecuta la línea 28 */
+        this.dataSource = new MatTableDataSource(data); //THIS
+        this.dataSource.paginator = this.paginator; //THIS
       })
     })
   }
