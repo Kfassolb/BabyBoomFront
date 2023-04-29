@@ -34,7 +34,7 @@ export class TiposuscripcionCreaeditaComponent implements OnInit {
     if(this.form.value['nombreSuscripcion'].length>0){
       if (this.edicion){
         this.tcS.update(this.tiposuscripcion).subscribe(() => {
-          this.tcS.list().subscribe((data) => {
+          this.tcS.list().subscribe(data => {
             this.tcS.setList(data);
           });
       });
@@ -45,7 +45,7 @@ export class TiposuscripcionCreaeditaComponent implements OnInit {
         });
       });
     }
-      this.router.navigate(['Suscripcion']);
+      this.router.navigate(['TiposSuscripcion']);
     }else{
       this.mensaje="Ingrese suscripcion";
     }
