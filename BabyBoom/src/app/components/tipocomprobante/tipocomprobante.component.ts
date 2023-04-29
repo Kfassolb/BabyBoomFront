@@ -11,3 +11,4 @@ export class TipocomprobanteComponent implements OnInit{
 
   constructor(public route:ActivatedRoute){}
 }
+

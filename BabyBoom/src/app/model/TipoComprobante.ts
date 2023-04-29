@@ -1,4 +1,4 @@
 export class Tipocomprobante{
-  IDTipoComprobante:number=0
+  id:number=0
   nombreComprobante:string=""
 }

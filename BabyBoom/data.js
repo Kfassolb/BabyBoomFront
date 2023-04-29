@@ -1,20 +1,20 @@
 module.exports = function(){
   var data = {
-    TiposComprobantes: [
+    tipocomprobantes: [
       {
-        IDTipoComprobante: 1,
+        id: 1,
         nombreComprobante: "Boleta de venta electronica",
       },
       {
-        IDTipoComprobante: 2,
+        id: 2,
         nombreComprobante: "Factura electrónica",
       },
       {
-        IDTipoComprobante: 3,
+        id: 3,
         nombreComprobante: "Nota de crédito electrónica",
       },
       {
-        IDTipoComprobante: 4,
+        id: 4,
         nombreComprobante: "Nota de débito electrónica",
       },
     ],
@@ -42,16 +42,40 @@ module.exports = function(){
     ],
     Servicio: [
       {
-        IDservicio:1,
+        id:1,
         NombreServicio:"Baño bebe",
       },
       {
-        IDservicio:2,
+        id:2,
         NombreServicio:"Dar comer bebe",
       },
       {
-        IDservicio:3,
+        id:3,
         NombreServicio:"Siesta bebe",
+      },
+    ],
+    Producto: [
+      {
+        id:1,
+        Nombre:"Babero",
+        Tipo:"Prenda",
+        Cantidad:2,
+        PrecioUnitario:10 ,
+      },
+      {
+        id:2,
+        Nombre:"Coche",
+        Tipo:"Transporte",
+        Cantidad:1,
+        PrecioUnitario:350,
+      },
+      {
+        id:3,
+        Nombre:"Sonaja",
+        Tipo:"Juguete",
+        Cantidad:5,
+        PrecioUnitario:8,
+
       },
     ],
     TiposEnfermedades: [
@@ -74,9 +98,22 @@ module.exports = function(){
         id: 4,
         nombreEnfermedad: "Sordera parcial",
         TipoEnfermedad:"Problemas de oído",
+      }
+    ],
+    TiposSuscripcion: [
+      {
+        id: 1,
+        nombreSuscripcion: "Gratuito",
+      },
+      {
+        id: 2,
+        nombreSuscripcion: "Premium mensual",
+      },
+      {
+        id: 3,
+        nombreSuscripcion: "Premium anual",
       },
     ],
   }
   return data
 }
-
