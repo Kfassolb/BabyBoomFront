@@ -25,7 +25,7 @@
           <input matInput placeholder="nombreEnfermedad" formControlName="nombreEnfermedad" required />
         </mat-form-field>
         <br />
-        <mat-form-field appearance="fill">
+        <mat-form-field class="example-full-width">
           <mat-label>Tipo</mat-label>
           <mat-select placeholder="TipoEnfermedad" formControlName="TipoEnfermedad" required>
             <mat-option value="Infecciones respiratoria">Infecciones respiratoria</mat-option>
@@ -35,7 +35,7 @@
           </mat-select>
         </mat-form-field>
 
-        <div style="text-align: center">
+        <div class="d-flex justify-content-center">
           <button class="btn-accept"><mat-icon>check_circle</mat-icon></button>
           <mat-icon routerLink="/TipoEnfermedad" class="ms-4">cancel</mat-icon>
         </div>
