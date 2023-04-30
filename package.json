@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "@angular/material-moment-adapter": "^15.2.8"
+  },
+  "scripts": {
+    "start": "npm start --prefix ./BabyBoom | npm run server --prefix ./BabyBoom"
   }
 }
