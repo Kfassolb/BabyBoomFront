@@ -28,6 +28,8 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle'
 import { ProductoComponent } from './components/producto/producto.component';
 import { ProductoListarComponent } from './components/producto/producto-listar/producto-listar.component';
 import { ProductoCreaeditaComponent } from './components/producto/producto-creaedita/producto-creaedita.component';
+import { ProductoDialogoComponent } from './components/producto/producto-listar/producto-dialogo/producto-dialogo.component';
+import { MatDialogModule } from '@angular/material/dialog';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,13 +46,13 @@ import { ProductoCreaeditaComponent } from './components/producto/producto-creae
     ProductoComponent,
     ProductoListarComponent,
     ProductoCreaeditaComponent,
+    ProductoDialogoComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     MatTableModule,
-    BrowserAnimationsModule,
     ReactiveFormsModule,
     MatNativeDateModule,
     FormsModule,
@@ -61,6 +63,7 @@ import { ProductoCreaeditaComponent } from './components/producto/producto-creae
     BrowserAnimationsModule,
     MatIconModule,
     MatSlideToggleModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
