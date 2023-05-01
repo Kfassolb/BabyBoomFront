@@ -1,18 +1,11 @@
 import { Dialog } from '@angular/cdk/dialog';
-<<<<<<< HEAD
 import { Component, OnInit, ViewChild } from '@angular/core';
-=======
-import { Component, OnInit } from '@angular/core';
->>>>>>> Renzo
 import { MatTableDataSource } from '@angular/material/table';
 import { Tipocomprobante } from 'src/app/model/TipoComprobante';
 import { TipocomprobanteService } from 'src/app/service/tipocomprobante.service';
 import { TipocomprobanteDialogoComponent } from './tipocomprobante-dialogo/tipocomprobante-dialogo.component';
 import { MatDialog } from '@angular/material/dialog';
-<<<<<<< HEAD
 import { MatPaginator } from '@angular/material/paginator';
-=======
->>>>>>> Renzo
 
 @Component({
   selector: 'app-tipocomprobante-listar',
@@ -24,10 +17,7 @@ export class TipocomprobanteListarComponent implements OnInit{
   dataSource:MatTableDataSource<Tipocomprobante> = new MatTableDataSource();
   displayedColumns:string[] = ['id', 'tipoComprobante','accion1']
   private idMayor:number=0
-<<<<<<< HEAD
   @ViewChild(MatPaginator) paginator!: MatPaginator;
-=======
->>>>>>> Renzo
   constructor(private tcS:TipocomprobanteService, private dialog:MatDialog){
 
   }
@@ -52,11 +42,8 @@ export class TipocomprobanteListarComponent implements OnInit{
     this.tcS.eliminar(id).subscribe(() =>{
       this.tcS.list().subscribe(data=>{
         this.tcS.setList(data);
-<<<<<<< HEAD
         this.dataSource = new MatTableDataSource(data);
         this.dataSource.paginator = this.paginator;
-=======
->>>>>>> Renzo
       })
     })
   }
