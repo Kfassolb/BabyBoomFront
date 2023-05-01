@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import {MatTableModule} from '@angular/material/table';
 import { UsuarioComponent } from './components/usuario/usuario.component';
+
 import { UsuarioCreaeditaComponent } from './components/usuario/usuario-creaedita/usuario-creaedita.component';
 import { TipocomprobanteCreaeditaComponent } from './components/tipocomprobante/tipocomprobante-creaedita/tipocomprobante-creaedita.component'
 import { ServicioCreaditaComponent } from './components/servicio/servicio-creadita/servicio-creadita.component';
@@ -23,6 +24,7 @@ import{MatSelectModule} from '@angular/material/select'
 
 import { ServicioComponent } from './components/servicio/servicio.component';
 import { ServicioDialogoComponent } from './components/servicio/servicio-listar/servicio-dialogo/servicio-dialogo.component'
+
 import { ServicioListarComponent } from './components/servicio/servicio-listar/servicio-listar.component'
 import { MatIconModule } from '@angular/material/icon';
 import { TipoenfermedadComponent } from './components/tipoenfermedad/tipoenfermedad.component';
@@ -72,6 +74,8 @@ import { TiposuscripcionDialogoComponent } from './components/tiposuscripcion/ti
     TiposuscripcionListarComponent,
     TiposuscripcionCreaeditaComponent,
     TiposuscripcionDialogoComponent,
+    TipocomprobanteDialogoComponent
+
   ],
   imports: [
     AppRoutingModule,
