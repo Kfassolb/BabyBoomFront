@@ -1,4 +1,4 @@
 export const environment = {
   production: true, //no está desplegado
-  base:'http://localhost:5000'
+  base:'https://api-bb-ashen.vercel.app'
 }
