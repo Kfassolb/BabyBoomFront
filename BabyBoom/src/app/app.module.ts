@@ -40,6 +40,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { ProductoComponent } from './components/producto/producto.component';
 import { ProductoListarComponent } from './components/producto/producto-listar/producto-listar.component';
 import { ProductoCreaeditaComponent } from './components/producto/producto-creaedita/producto-creaedita.component';
+import { ProductoDialogoComponent } from './components/producto/producto-listar/producto-dialogo/producto-dialogo.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -61,6 +62,7 @@ import { ProductoCreaeditaComponent } from './components/producto/producto-creae
     ProductoComponent,
     ProductoListarComponent,
     ProductoCreaeditaComponent,
+    ProductoDialogoComponent,
     ServicioListarComponent,
     TipocomprobanteCreaeditaComponent,
     ServicioCreaditaComponent,
@@ -70,11 +72,9 @@ import { ProductoCreaeditaComponent } from './components/producto/producto-creae
     TiposuscripcionCreaeditaComponent,
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     MatTableModule,
-    BrowserAnimationsModule,
     ReactiveFormsModule,
     MatNativeDateModule,
     FormsModule,
@@ -87,7 +87,7 @@ import { ProductoCreaeditaComponent } from './components/producto/producto-creae
     MatSlideToggleModule,
     MatDialogModule,
     MatPaginatorModule,
-
+    BrowserModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
