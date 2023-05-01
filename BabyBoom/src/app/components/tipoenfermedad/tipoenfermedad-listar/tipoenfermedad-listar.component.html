@@ -8,6 +8,13 @@
 </head>
 <body>
   <div>
+
+    <div style="text-align: right">
+      <button mat-raised-button color="primary" mat-raisdsed-button routerLink="/Enfermedad/agregar"
+      >Agregar</button>
+
+    </div>
+
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
     <!--- Note that these columns can be defined in any order.
@@ -16,18 +23,27 @@
     <!-- Position Column -->
     <ng-container matColumnDef="id">
       <th mat-header-cell *matHeaderCellDef> No. </th>
-      <td mat-cell *matCellDef="let element"> {{element.IDTipoEnfermedad}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
     </ng-container>
 
     <!-- Name Column -->
-    <ng-container matColumnDef="tipoenfermedad">
-      <th mat-header-cell *matHeaderCellDef> Tipo Enfermedad </th>
+
+    <ng-container matColumnDef="nombreEnfermedad">
+      <th mat-header-cell *matHeaderCellDef> Nombre </th>
       <td mat-cell *matCellDef="let element"> {{element.nombreEnfermedad}} </td>
     </ng-container>
 
-    <ng-container matColumnDef="Nombreenfermedad">
-      <th mat-header-cell *matHeaderCellDef> Nombre </th>
+    <ng-container matColumnDef="TipoEnfermedad">
+      <th mat-header-cell *matHeaderCellDef> Tipo Enfermedad </th>
       <td mat-cell *matCellDef="let element"> {{element.TipoEnfermedad}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="accion01">
+      <th mat-header-cell *matHeaderCellDef>Acción01</th>
+      <td mat-cell *matCellDef="let element">
+        <button mat-raised-button color="warn" [routerLink]="['edicion', element.id]">Actualizar</button>
+        <button mat-raised-button color="accent" (click)="confirmar(element.id)">Eliminar</button>
+      </td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

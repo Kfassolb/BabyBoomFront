@@ -42,15 +42,15 @@ module.exports = function(){
     ],
     Servicio: [
       {
-        IDservicio:1,
+        id:1,
         NombreServicio:"Baño bebe",
       },
       {
-        IDservicio:2,
+        id:2,
         NombreServicio:"Dar comer bebe",
       },
       {
-        IDservicio:3,
+        id:3,
         NombreServicio:"Siesta bebe",
       },
     ],
@@ -80,24 +80,38 @@ module.exports = function(){
     ],
     TiposEnfermedades: [
       {
-        IDTipoEnfermedad: 1,
-        nombreEnfermedad: "Infecciones respiratorias",
-        TipoEnfermedad:"Asma"
+        id: 1,
+        nombreEnfermedad: "Asma",
+        TipoEnfermedad:"Infecciones respiratorias"
       },
       {
-        IDTipoEnfermedad: 2,
-        nombreEnfermedad: "Infecciones gastrointestinales",
-        TipoEnfermedad:"Gastritis"
+        id: 2,
+        nombreEnfermedad: "Gastritis",
+        TipoEnfermedad:"Infecciones gastrointestinales"
       },
       {
-        IDTipoEnfermedad: 3,
-        nombreEnfermedad: "Infecciones de la piel",
-        TipoEnfermedad:"Bitiligo"
+        id: 3,
+        nombreEnfermedad: "Bitiligo",
+        TipoEnfermedad:"Infecciones de la piel",
       },
       {
-        IDTipoEnfermedad: 4,
-        nombreEnfermedad: "Problemas de oído",
-        TipoEnfermedad:"Sordera parcial"
+        id: 4,
+        nombreEnfermedad: "Sordera parcial",
+        TipoEnfermedad:"Problemas de oído",
+      }
+    ],
+    TiposSuscripcion: [
+      {
+        id: 1,
+        nombreSuscripcion: "Gratuito",
+      },
+      {
+        id: 2,
+        nombreSuscripcion: "Premium mensual",
+      },
+      {
+        id: 3,
+        nombreSuscripcion: "Premium anual",
       },
     ],
   }
