@@ -72,7 +72,6 @@ import { ProductoDialogoComponent } from './components/producto/producto-listar/
     TiposuscripcionCreaeditaComponent,
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     MatTableModule,
@@ -88,6 +87,7 @@ import { ProductoDialogoComponent } from './components/producto/producto-listar/
     MatSlideToggleModule,
     MatDialogModule,
     MatPaginatorModule,
+    BrowserModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
