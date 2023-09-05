@@ -44,6 +44,7 @@ import { ProductoListarComponent } from './components/producto/producto-listar/p
 import { ProductoCreaeditaComponent } from './components/producto/producto-creaedita/producto-creaedita.component';
 import { ProductoDialogoComponent } from './components/producto/producto-listar/producto-dialogo/producto-dialogo.component';
 import { TiposuscripcionDialogoComponent } from './components/tiposuscripcion/tiposuscripcion-listar/tiposuscripcion-dialogo/tiposuscripcion-dialogo.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -60,22 +61,17 @@ import { TiposuscripcionDialogoComponent } from './components/tiposuscripcion/ti
     TipocomprobanteDialogoComponent,
     TipoenfermedadCreareditarComponent,
     TipoenfermedadDialogoComponent,
-
     UsuarioDialogoComponent,
     ProductoComponent,
     ProductoListarComponent,
     ProductoCreaeditaComponent,
     ProductoDialogoComponent,
-    ServicioListarComponent,
-    TipocomprobanteCreaeditaComponent,
     ServicioCreaditaComponent,
     ServicioDialogoComponent,
     TiposuscripcionComponent,
     TiposuscripcionListarComponent,
     TiposuscripcionCreaeditaComponent,
-    TiposuscripcionDialogoComponent,
-    TipocomprobanteDialogoComponent
-
+    TiposuscripcionDialogoComponent
   ],
   imports: [
     AppRoutingModule,
