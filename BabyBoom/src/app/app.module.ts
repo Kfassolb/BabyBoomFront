@@ -8,7 +8,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import {MatTableModule} from '@angular/material/table';
 import { UsuarioComponent } from './components/usuario/usuario.component';
-
 import { UsuarioCreaeditaComponent } from './components/usuario/usuario-creaedita/usuario-creaedita.component';
 import { TipocomprobanteCreaeditaComponent } from './components/tipocomprobante/tipocomprobante-creaedita/tipocomprobante-creaedita.component'
 import { ServicioCreaditaComponent } from './components/servicio/servicio-creadita/servicio-creadita.component';
@@ -20,11 +19,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatNativeDateModule } from '@angular/material/core';
 import{MatInputModule} from '@angular/material/input'
 import{MatSelectModule} from '@angular/material/select'
-
-
 import { ServicioComponent } from './components/servicio/servicio.component';
 import { ServicioDialogoComponent } from './components/servicio/servicio-listar/servicio-dialogo/servicio-dialogo.component'
-
 import { ServicioListarComponent } from './components/servicio/servicio-listar/servicio-listar.component'
 import { MatIconModule } from '@angular/material/icon';
 import { TipoenfermedadComponent } from './components/tipoenfermedad/tipoenfermedad.component';
@@ -38,12 +34,21 @@ import { TipoenfermedadDialogoComponent } from './components/tipoenfermedad/tipo
 import { UsuarioDialogoComponent } from './components/usuario/usuario-listar/usuario-dialogo/usuario-dialogo.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatPaginatorModule } from '@angular/material/paginator';
-
 import { ProductoComponent } from './components/producto/producto.component';
 import { ProductoListarComponent } from './components/producto/producto-listar/producto-listar.component';
 import { ProductoCreaeditaComponent } from './components/producto/producto-creaedita/producto-creaedita.component';
 import { ProductoDialogoComponent } from './components/producto/producto-listar/producto-dialogo/producto-dialogo.component';
 import { TiposuscripcionDialogoComponent } from './components/tiposuscripcion/tiposuscripcion-listar/tiposuscripcion-dialogo/tiposuscripcion-dialogo.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatSortModule } from '@angular/material/sort';
+import { ToastrModule } from 'ngx-toastr';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegistroComponent } from './components/registro/registro.component';
+import { UpdatepopupComponent } from './components/updatepopup/updatepopup.component';
+
 
 @NgModule({
   declarations: [
@@ -71,7 +76,11 @@ import { TiposuscripcionDialogoComponent } from './components/tiposuscripcion/ti
     TiposuscripcionComponent,
     TiposuscripcionListarComponent,
     TiposuscripcionCreaeditaComponent,
-    TiposuscripcionDialogoComponent
+    TiposuscripcionDialogoComponent,
+    NavBarComponent,
+    LoginComponent,
+    RegistroComponent,
+    UpdatepopupComponent
   ],
   imports: [
     AppRoutingModule,
@@ -90,6 +99,11 @@ import { TiposuscripcionDialogoComponent } from './components/tiposuscripcion/ti
     MatDialogModule,
     MatPaginatorModule,
     BrowserModule,
+    MatCardModule,
+    MatRadioModule,
+    MatCheckboxModule,
+    MatSortModule,
+    ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

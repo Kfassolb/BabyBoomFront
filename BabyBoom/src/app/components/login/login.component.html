@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- https://codepen.io/fghty/pen/PojKNEG -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <form [formGroup]="loginform" (ngSubmit)="proceedlogin()">
+        <h3>Baby Boom</h3>
+        <label for="username" class="form-label">Username
+          <i class="bi bi-person-fill"></i>
+        </label>
+        <input type="text" placeholder="Username" id="username" formControlName="id" name="something">
+
+        <label for="password">Password
+          <i class="bi bi-shield-lock-fill"></i>
+        </label>
+        <input type="password" placeholder="Password" id="password"  formControlName="password" name="something">
+
+        <button class="btn btn-primary mt-4">Log In
+          <i class="bi bi-box-arrow-in-right ms-2"></i>
+        </button>
+        <button class="btn btn-dark mt-4" routerLink="/registro">Sign Up
+          <i class="bi bi-person-fill-add ms-2"></i>
+        </button>
+    </form>
+</body>
+</html>

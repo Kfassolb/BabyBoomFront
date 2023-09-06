@@ -1,0 +1,30 @@
+<body>
+<div class="background">
+  <div class="shape"></div>
+  <div class="shape"></div>
+</div>
+<form [formGroup]="registerform" (ngSubmit)="proceedregisteration()">
+  <h3>Sing Up</h3>
+  <label for="username" class="form-label">Username
+    <i class="bi bi-person-fill"></i>
+  </label>
+  <input type="text" placeholder="Username" id="username" formControlName="id" required>
+
+  <label for="name" class="form-label">Name
+    <i class="bi bi-person-fill"></i>
+  </label>
+  <input type="text" placeholder="Name" id="name" formControlName="name" required>
+
+  <label for="password">Password
+    <i class="bi bi-shield-lock-fill"></i>
+  </label>
+  <input type="password" placeholder="Password" id="password" formControlName="password"  required>
+
+  <button class="btn btn-primary mt-4 ms-4 p-3">Sign Up
+    <i class="bi bi-box-arrow-in-right ms-2"></i>
+  </button>
+  <button class="btn btn-outline-danger border border-danger  mt-4 ms-4 p-3" routerLink="/login">Back
+    <i class="bi bi-arrow-left-circle ms-2"></i>
+  </button>
+</form>
+</body>
