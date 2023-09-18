@@ -39,6 +39,8 @@ export class LoginComponent {
           this.toastr.error('Invalid credentials')
         }
       });
+    }else{
+      this.toastr.warning('Please enter the requested information')
     }
   }
 }

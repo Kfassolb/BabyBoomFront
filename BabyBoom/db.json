@@ -27,6 +27,11 @@
       "id": "parker",
       "name": "Jim Park",
       "password": "P4$$word124"
+    },
+    {
+      "id": "xyz",
+      "name": "Zacsa Neo",
+      "password": "1234"
     }
   ],
   "Servicio": [

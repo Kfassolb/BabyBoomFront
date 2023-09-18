@@ -27,16 +27,16 @@ export class UsuarioCreaeditaComponent implements OnInit{
     })
     this.form = new FormGroup({
       id: new FormControl(),
-      Username: new FormControl(),
-      Password: new FormControl(),
+      name: new FormControl(),
+      password: new FormControl(),
     })
   }
   aceptar():void {
     this.usuario.id = this.form.value['id'];
-    this.usuario.Username = this.form.value['Username'];
-    this.usuario.Password = this.form.value['Password'];
+    this.usuario.name = this.form.value['name'];
+    this.usuario.password = this.form.value['password'];
 
-    if (this.form.value['Username'].length>0 && this.form.value['Password'].length>0) {
+    if (this.form.value['name'].length>0 && this.form.value['password'].length>0) {
       if (this.edicion) {
         this.uS.update(this.usuario).subscribe(()=>{
           this.uS.list().subscribe(data=>{
@@ -61,8 +61,8 @@ export class UsuarioCreaeditaComponent implements OnInit{
       this.uS.listId(this.id).subscribe(data=>{
         this.form=new FormGroup({
           id:new FormControl(data.id),
-          Username:new FormControl(data.Username),
-          Password:new FormControl(data.Password),
+          name:new FormControl(data.name),
+          password:new FormControl(data.password),
         });
       });
     }
