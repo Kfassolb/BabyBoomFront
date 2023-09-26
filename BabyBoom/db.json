@@ -1,110 +1,14 @@
 {
-  "tipocomprobantes": [
-    {
-      "id": 1,
-      "nombreComprobante": "Boleta de venta electronica"
-    },
-    {
-      "id": 2,
-      "nombreComprobante": "Factura electrónica"
-    },
-    {
-      "id": 3,
-      "nombreComprobante": "Nota de crédito electrónica"
-    },
-    {
-      "id": 4,
-      "nombreComprobante": "Nota de débito electrónica"
-    }
-  ],
+  "tipocomprobantes": [],
   "Usuario": [
     {
-      "id": "chechito",
-      "name": "Juan Perez",
-      "password": "ajEvV54!sC$uZP"
-    },
-    {
-      "id": "parker",
-      "name": "Jim Park",
-      "password": "P4$$word124"
-    },
-    {
-      "id": "xyz",
-      "name": "Zacsa Neo",
-      "password": "1234"
+      "id": "admin",
+      "name": "Topson Shculder",
+      "password": "YP74mV*vkvi9C^"
     }
   ],
-  "Servicio": [
-    {
-      "id": 1,
-      "NombreServicio": "Baño bebe"
-    },
-    {
-      "id": 2,
-      "NombreServicio": "Dar comer bebe"
-    },
-    {
-      "id": 3,
-      "NombreServicio": "Siesta bebe"
-    }
-  ],
-  "Producto": [
-    {
-      "id": 1,
-      "Nombre": "Babero",
-      "Tipo": "Prenda",
-      "Cantidad": 2,
-      "PrecioUnitario": 10
-    },
-    {
-      "id": 2,
-      "Nombre": "Coche",
-      "Tipo": "Transporte",
-      "Cantidad": 1,
-      "PrecioUnitario": 350
-    },
-    {
-      "id": 3,
-      "Nombre": "Sonaja",
-      "Tipo": "Juguete",
-      "Cantidad": 5,
-      "PrecioUnitario": 8
-    }
-  ],
-  "TiposEnfermedades": [
-    {
-      "id": 1,
-      "nombreEnfermedad": "Asma",
-      "TipoEnfermedad": "Infecciones respiratorias"
-    },
-    {
-      "id": 2,
-      "nombreEnfermedad": "Gastritis",
-      "TipoEnfermedad": "Infecciones gastrointestinales"
-    },
-    {
-      "id": 3,
-      "nombreEnfermedad": "Bitiligo",
-      "TipoEnfermedad": "Infecciones de la piel"
-    },
-    {
-      "id": 4,
-      "nombreEnfermedad": "Sordera parcial",
-      "TipoEnfermedad": "Problemas de oído"
-    }
-  ],
-  "TiposSuscripcion": [
-    {
-      "id": 1,
-      "nombreSuscripcion": "Gratuito"
-    },
-    {
-      "id": 2,
-      "nombreSuscripcion": "Premium mensual"
-    },
-    {
-      "id": 3,
-      "nombreSuscripcion": "Premium anual"
-    }
-  ]
+  "Servicio": [],
+  "Producto": [],
+  "TiposEnfermedades": [],
+  "TiposSuscripcion": []
 }
