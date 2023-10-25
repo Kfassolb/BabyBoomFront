@@ -14,9 +14,9 @@
             <h1>Registro de Servicios</h1>
         </div>
 
-        <form [formGroup]="form" (submit)="aceptar()">
+        <form [formGroup]="form">
 
-            <mat-form-field class="example-full-width">
+            <mat-form-field class="example-full-width" *ngIf="!edicion">
                 <mat-label>Id</mat-label>
                 <input matInput placeholder="id" formControlName="id">
             </mat-form-field>
@@ -27,7 +27,7 @@
             </mat-form-field>
             <br>
             <div style="text-align: center;">
-                <button mat-raised-button color="primary">Aceptar</button>
+                <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
 
                 <button mat-raised-button color="warn" routerLink="/servicio">Cancelar</button>
             <p>{{mensaje}}</p>

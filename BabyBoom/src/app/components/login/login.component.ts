@@ -29,10 +29,10 @@ export class LoginComponent {
     // }else{
     //   this.toastr.warning('Please enter a strong password');
     // }
-      this.service.Getbycode(this.loginform.value.id).subscribe(res=>{
+      this.service.Getbycode(this.loginform.value.id).subscribe(res=>{ //el Getbycode obtiene los datos (json) del id ingresado ejem: http://localhost:3000/Usuario/chechito
         this.userdata=res;
         console.log(this.userdata);
-        if(this.userdata.password === this.loginform.value.password){
+        if(this.userdata.password === this.loginform.value.password){ // acá se compara lo que se tiene en el db.json con lo del formulario
           sessionStorage.setItem('username',this.userdata.id);
           this.router.navigate(['']);
         }else{

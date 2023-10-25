@@ -15,7 +15,7 @@
       </div>
 
       <form [formGroup]="form" (submit)="aceptar()">
-        <mat-form-field class="example-full-width">
+        <mat-form-field class="example-full-width" *ngIf="!edicion">
           <mat-label>Id</mat-label>
           <input matInput placeholder="id" formControlName="id" required/>
         </mat-form-field>
@@ -29,7 +29,7 @@
           <mat-label>Tipo</mat-label>
           <mat-select placeholder="TipoEnfermedad" formControlName="TipoEnfermedad" required>
             <mat-option value="Infecciones respiratoria">Infecciones respiratoria</mat-option>
-            <mat-option value="Infecciones gastrointestinales">Infecciones de la piel</mat-option>
+            <mat-option value="Infecciones gastrointestinales">Infecciones gastrointestinales</mat-option>
             <mat-option value="Problemas de oído">Problemas de oído</mat-option>
             <mat-option value="Infecciones de la piel">Infecciones de la piel</mat-option>
           </mat-select>
@@ -37,7 +37,7 @@
 
         <div class="d-flex justify-content-center">
           <button class="btn-accept"><mat-icon>check_circle</mat-icon></button>
-          <mat-icon routerLink="/TipoEnfermedad" class="ms-4">cancel</mat-icon>
+          <mat-icon routerLink="/Enfermedad" class="ms-4">cancel</mat-icon>
         </div>
       </form>
     </div>

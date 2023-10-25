@@ -14,7 +14,7 @@ export class UsuarioCreaeditaComponent implements OnInit{
   usuario: Usuario = new Usuario();
   mensaje: String = "";
 
-  id:number =0;
+  id:string ="";
   edicion:boolean = false;
 
   constructor(private uS:UsuarioService, private router:Router, private route:ActivatedRoute){};
