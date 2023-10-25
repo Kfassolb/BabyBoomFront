@@ -27,13 +27,13 @@ export class UsuarioService {
   getList(){
     return this.listCambio.asObservable();
   }
-  listId(id:number){
+  listId(id:string){
     return this.http.get<Usuario>(`${this.url}/${id}`)
   }
   update(usuario:Usuario){
     return this.http.put(this.url + "/" + usuario.id, usuario);
   }
-  delete(id:number){
+  delete(id:string){
     return this.http.delete(`${this.url}/${id}`);
   }
   getConfirmDeletion(){

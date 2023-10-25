@@ -4,6 +4,7 @@ import { Tipoenfermedad } from 'src/app/model/Tipoenfermedad';
 import * as moment from 'moment';
 import { TipoEnfermedadeService } from 'src/app/service/tipoenfermedad.service';
 import { ActivatedRoute, Params, Router } from '@angular/router';
+import { ToastrService} from 'ngx-toastr';
 
 @Component({
   selector: 'app-tipoenfermedad-creareditar',
@@ -21,7 +22,8 @@ export class TipoenfermedadCreareditarComponent implements OnInit {
   constructor(
     private pS: TipoEnfermedadeService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private toastr:ToastrService
   ) {}
   ngOnInit(): void {
     this.route.params.subscribe((data:Params) => {
@@ -42,7 +44,7 @@ export class TipoenfermedadCreareditarComponent implements OnInit {
     this.Tipoenfermedad.nombreEnfermedad = this.form.value['nombreEnfermedad'];
     this.Tipoenfermedad.TipoEnfermedad = this.form.value['TipoEnfermedad'];
 
-    if (this.form.value['nombreEnfermedad'].length > 0) {
+    if (this.form.value['nombreEnfermedad']) {
       if (this.edicion) {
         this.pS.update(this.Tipoenfermedad).subscribe(() => {
           this.pS.list().subscribe((data) => {
@@ -58,7 +60,7 @@ export class TipoenfermedadCreareditarComponent implements OnInit {
       }
       this.router.navigate(['Enfermedad']);
     } else {
-      this.mensaje = 'Ingrese el nombre de la enfermedad!!!';
+      this.toastr.warning('Ingrese el nombre de la enfermedad!!!');
     }
   }
 

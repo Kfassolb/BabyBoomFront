@@ -4,6 +4,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 import { Tipocomprobante } from 'src/app/model/TipoComprobante';
 import * as moment from 'moment';
 import { ActivatedRoute, Params, Router } from '@angular/router';
+import { ToastrService} from 'ngx-toastr';
 
 @Component({
   selector: 'app-tipocomprobante-creaedita',
@@ -17,7 +18,7 @@ export class TipocomprobanteCreaeditaComponent implements OnInit{
   tipocomprobante:Tipocomprobante = new Tipocomprobante();
   mensaje:string = "";
   maxFecha:Date = moment().add(-1, 'days').toDate();
-  constructor(private tcS:TipocomprobanteService, private router:Router, private route:ActivatedRoute){}
+  constructor(private tcS:TipocomprobanteService, private router:Router, private route:ActivatedRoute, private toastr:ToastrService){}
 
   ngOnInit(): void {
     this.route.params.subscribe((data:Params)=>{
@@ -34,7 +35,7 @@ export class TipocomprobanteCreaeditaComponent implements OnInit{
   aceptar():void{
     this.tipocomprobante.id = this.form.value['id'];
     this.tipocomprobante.nombreComprobante = this.form.value['nombreComprobante']
-    if(this.form.value['nombreComprobante'].length>0){
+    if(this.form.value['nombreComprobante'] && /^[a-zA-ZñÑ ]+$/.test(this.form.value['nombreComprobante']) && this.form.value['id'] && /^[0-9]+$/.test(this.form.value['id'])){
       if(this.edicion){
         this.tcS.update(this.tipocomprobante).subscribe(()=>{
           this.tcS.list().subscribe(data=>{
@@ -50,7 +51,7 @@ export class TipocomprobanteCreaeditaComponent implements OnInit{
       }
       this.router.navigate(['tipocomprobantes'])
     }else{
-      this.mensaje = "Ingrese el nombre!!";
+      this.toastr.warning('Por favor ingrese toda la información solicitada correctamente');
     }
   }
 

@@ -25,13 +25,13 @@ export class ProductoService {
   getList(){
     return this.listCambio.asObservable();
   }
-  listId(id:number){
+  listId(id:string){
     return this.http.get<Producto>(`${this.url}/${id}`);
   }
   update(producto:Producto){
     return this.http.put(this.url+"/"+producto.id,producto);
   }
-  eliminar(id:number){
+  eliminar(id:string){
     return this.http.delete(`${this.url}/${id}`);
   }
   getConfirmarEliminar(){

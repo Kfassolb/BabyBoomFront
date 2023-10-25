@@ -16,7 +16,7 @@ export class UsuarioListarComponent implements OnInit{
   dataSource: MatTableDataSource<Usuario>=new MatTableDataSource();
   displayedColumns: string[]=['id', 'username','actualizar'];
   @ViewChild(MatPaginator) paginator!: MatPaginator; //THIS
-  private idHigh:number=0;
+  private idHigh:string="";
 
   constructor(private uS: UsuarioService, private dialog:MatDialog){}
 
@@ -33,11 +33,11 @@ export class UsuarioListarComponent implements OnInit{
       data == true? this.delete(this.idHigh):false;
     })
   }
-  confirm(id: number){
+  confirm(id: string){
     this.idHigh = id;
     this.dialog.open(UsuarioDialogoComponent)
   }
-  delete(id:number){
+  delete(id:string){
     this.uS.delete(id).subscribe(()=>{
       this.uS.list().subscribe(data=>{
         this.uS.setList(data); /* se ejecuta la línea 28 */

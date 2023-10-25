@@ -15,7 +15,7 @@ export class ProductoListarComponent implements OnInit {
   lista: Producto[] = [];
   dataSource: MatTableDataSource<Producto> = new MatTableDataSource();
   displayedColumns: string[] = ['id', 'nombre', 'tipo', 'cantidad', 'preciounitario','accion1'];
-  idMayor: number = 0;
+  idMayor: string = "";
   @ViewChild(MatPaginator) paginator!: MatPaginator; //THIS
   private idHigh:number=0;
 
@@ -34,12 +34,12 @@ export class ProductoListarComponent implements OnInit {
     })
   }
 
-  confirmar(id: number){
+  confirmar(id: string){
     this.idMayor = id;
     this.dialog.open(ProductoDialogoComponent);
   }
 
-  eliminar(id:number){
+  eliminar(id:string){
     this.pS.eliminar(id).subscribe(() =>{
       this.pS.list().subscribe(data=>{
         this.pS.setList(data);

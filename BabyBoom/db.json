@@ -74,8 +74,8 @@
   "TiposEnfermedades": [
     {
       "id": 1,
-      "nombreEnfermedad": "Asma",
-      "TipoEnfermedad": "Infecciones respiratorias"
+      "nombreEnfermedad": "Sarna",
+      "TipoEnfermedad": "Infecciones de la piel"
     },
     {
       "id": 2,
