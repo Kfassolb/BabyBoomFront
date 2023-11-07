@@ -44,47 +44,53 @@ export class ProductoCreaeditaComponent implements OnInit{
     this.producto.Cantidad = this.form.value['Cantidad'];
     this.producto.PrecioUnitario = this.form.value['PrecioUnitario'];
 
+    let nombre = this.form.value['Nombre'];
     let tipo = this.form.value['Tipo'];
     let id = this.form.value['id'];
     let cantidad = this.form.value['Cantidad'];
     let precio = this.form.value['PrecioUnitario'];
+    let esNombreValido = nombre && nombre.length>=5 && /^[a-zA-ZñÑ ]+$/.test(nombre)
     let esTipoValido = tipo != null && tipo.length >= 5 && tipo.length <= 15 && /^[a-zA-ZñÑ ]+$/.test(tipo);
     let esIdValido = id!=null && id.length>0 && !/[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]/.test(id)
     let esCantidadValido = cantidad>0 && /^[0-9]+$/.test(cantidad);
     let esPrecioValido = precio>0 && /^[0-9]+$/.test(precio);
 
-    if(esTipoValido){
-      if(esCantidadValido){
-        if(esPrecioValido){
-          if(this.edicion){
-            this.pS.update(this.producto).subscribe(()=>{
-              this.pS.list().subscribe(data=>{
-                this.pS.setList(data);
+    if(esNombreValido){
+      if(esTipoValido){
+        if(esCantidadValido){
+          if(esPrecioValido){
+            if(this.edicion){
+              this.pS.update(this.producto).subscribe(()=>{
+                this.pS.list().subscribe(data=>{
+                  this.pS.setList(data);
+                });
               });
-            });
-            this.router.navigate(['Producto']);
-            this.toastr.success('Actualizado correctamente');
-          }else{
-            if(esIdValido){
-                  this.pS.insert(this.producto).subscribe(data=>{
-                    this.pS.list().subscribe(data=>{
-                      this.pS.setList(data);
-                    })
-                  })
-                  this.router.navigate(['Producto']);
-                  this.toastr.success('Registro realizado con éxito');
+              this.router.navigate(['Producto']);
+              this.toastr.success('Actualizado correctamente');
             }else{
-              this.toastr.warning('ID: Debe contener unicamente números y letras');
+              if(esIdValido){
+                    this.pS.insert(this.producto).subscribe(data=>{
+                      this.pS.list().subscribe(data=>{
+                        this.pS.setList(data);
+                      })
+                    })
+                    this.router.navigate(['Producto']);
+                    this.toastr.success('Registro realizado con éxito');
+              }else{
+                this.toastr.warning('ID: Debe contener unicamente números y letras');
+              }
             }
+          }else{
+            this.toastr.warning('Precio Unitario ingresado inválido');
           }
         }else{
-          this.toastr.warning('Precio Unitario ingresado inválido');
+          this.toastr.warning('Cantidad ingresada inválida. Debe ser solo número y no debe ser negativo');
         }
       }else{
-        this.toastr.warning('Cantidad ingresada inválida. Debe ser solo número y no debe ser negativo');
+        this.toastr.warning('Tipo: Debe contener únicamente letras entre 5 y 15 caracteres');
       }
     }else{
-      this.toastr.warning('Tipo: Debe contener únicamente letras entre 5 y 15 caracteres');
+      this.toastr.warning('Ingrese nombre correctamente');
     }
   }
 
