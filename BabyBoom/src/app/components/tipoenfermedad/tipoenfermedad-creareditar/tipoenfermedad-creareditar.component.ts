@@ -44,7 +44,7 @@ export class TipoenfermedadCreareditarComponent implements OnInit {
     this.Tipoenfermedad.nombreEnfermedad = this.form.value['nombreEnfermedad'];
     this.Tipoenfermedad.TipoEnfermedad = this.form.value['TipoEnfermedad'];
 
-    if (this.form.value['nombreEnfermedad']) {
+    if (this.form.value['nombreEnfermedad'] && /^[a-zA-ZñÑ ]+$/.test(this.form.value['nombreEnfermedad'])) {
       if (this.edicion) {
         this.pS.update(this.Tipoenfermedad).subscribe(() => {
           this.pS.list().subscribe((data) => {
@@ -60,7 +60,7 @@ export class TipoenfermedadCreareditarComponent implements OnInit {
       }
       this.router.navigate(['Enfermedad']);
     } else {
-      this.toastr.warning('Ingrese el nombre de la enfermedad!!!');
+      this.toastr.warning('Ingrese el nombre de la enfermedad correctamente');
     }
   }
 

@@ -4,6 +4,7 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
 import * as moment from 'moment'
 import { Tiposuscripcion } from 'src/app/model/Tiposuscripcion';
 import { TiposuscripcionService } from 'src/app/service/tiposuscripcion.service';
+import { ToastrService} from 'ngx-toastr';
 
 @Component({
   selector: 'app-tiposuscripcion-creaedita',
@@ -17,7 +18,7 @@ export class TiposuscripcionCreaeditaComponent implements OnInit {
   form: FormGroup=new FormGroup({});
   tiposuscripcion: Tiposuscripcion=new Tiposuscripcion();
   mensaje: string="";
-  constructor(private tcS: TiposuscripcionService, private router:Router, private route:ActivatedRoute){}
+  constructor(private tcS: TiposuscripcionService, private router:Router, private route:ActivatedRoute, private toastr:ToastrService){}
   ngOnInit(): void {
     this.route.params.subscribe((data:Params)=>{
       this.id=data['id'];
@@ -33,7 +34,7 @@ export class TiposuscripcionCreaeditaComponent implements OnInit {
     this.tiposuscripcion.id=this.form.value['id'];
     this.tiposuscripcion.nombreSuscripcion=this.form.value['nombreSuscripcion'];
 
-    if(this.form.value['nombreSuscripcion'].length>0){
+    if(this.form.value['nombreSuscripcion'] && /^[a-zA-ZñÑ ]+$/.test(this.form.value['nombreSuscripcion'])){
       if (this.edicion){
         this.tcS.update(this.tiposuscripcion).subscribe(() => {
           this.tcS.list().subscribe(data => {
@@ -49,7 +50,7 @@ export class TiposuscripcionCreaeditaComponent implements OnInit {
     }
       this.router.navigate(['TiposSuscripcion']);
     }else{
-      this.mensaje="Ingrese suscripcion";
+      this.toastr.warning('Ingrese Suscripción Correctamente');
     }
   }
   init() {
